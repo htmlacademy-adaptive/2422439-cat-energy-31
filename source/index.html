@@ -5,6 +5,10 @@
     <title>Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png"><!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -16,25 +20,21 @@
             <source media="(min-width: 768px)" width="60" height="50" srcset="images/logo-tablet.svg" type="image/svg+xml">
             <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи">
           </picture>
-          <picture>
-            <source media="(min-width: 1200px)" width="118" height="21" srcset="images/logo-header-desktop.svg" type="image/svg+xml">
-            <source media="(min-width: 768px)" width="101" height="18" srcset="images/logo-header-tablet.svg" type="image/svg+xml">
-            <img class="logo__text" src="images/logo-header-mobile.svg" width="101" height="18" alt="Кэт энерджи">
-          </picture>
+          <img class="logo__text" src="images/logo-header-mobile.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
-        <button class="header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
         <nav class="header__navigation navigation">
+          <button class="navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="navigation__list">
-            <li class="navigation__list-item">
-              <a class="navigation__list-link navigation__list-link--current" href="#">Главная</a>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--current" href="#">Главная</a>
             </li>
-            <li class="navigation__list-item">
-              <a class="navigation__list-link" href="catalog.html">Каталог продукции</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="navigation__list-item">
-              <a class="navigation__list-link" href="#">Подбор программы</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -89,7 +89,7 @@
       </section>
       <section class="example">
         <div class="example__wrapper container">
-          <div class="example__content-wrapper">
+          <div class="example__content">
             <h2 class="example__title title-h2">Живой пример</h2>
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
             <ul class="example__list">
@@ -104,8 +104,14 @@
             </ul>
             <p class="example__cost"><span>Затраты на питание:</span><span>15 000 РУБ.</span></p>
             <div class="example__picture">
-              <img class="example__picture-image" src="#" width="280" height="256" alt="Толстый кот сидит">
-              <img class="example__picture-image" src="#" width="280" height="256" alt="Худой кот сидит">
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" srcset="images/fat-cat-tablet@1x.png 1x, images/fat-cat-tablet@2x.png 2x" type="image/png">
+                <img class="example__picture-image" src="images/fat-cat-mobile@1x.png" srcset="images/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот сидит">
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" srcset="images/slim-cat-tablet@1x.png 1x, images/slim-cat-tablet@2x.png 2x" type="image/png">
+                <img class="example__picture-image" src="images/slim-cat-mobile@1x.png" srcset="images/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Худой кот сидит">
+              </picture>
               <button class="example__picture-toggle" type="button" aria-label="Передвижение слайдера">Передвижение слайдера</button>
             </div>
           </div>
@@ -116,7 +122,7 @@
           <div class="contacts__content">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
         </div>
         <picture>
@@ -124,42 +130,37 @@
           <source media="(min-width: 768px)" width="768" height="400" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" type="image/png">
           <img class="contacts__map" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Карта места расположения">
         </picture>
+        <div class="contacts__map"></div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__wrapper container">
         <a class="footer__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" width="128" height="24" srcset="images/logo-header-desktop.svg" type="image/svg+xml">
-            <source media="(min-width: 768px)" width="128" height="24" srcset="images/logo-header-tablet.svg" type="image/svg+xml">
-            <img class="footer__logo-image" src="images/logo-footer-mobile.svg" width="128" height="24" alt="Кэт энерджи">
-          </picture>
+          <img class="footer__logo-image" src="images/logo-footer-mobile.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
-        <div class="footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+        <div class="footer__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
                 <span class="visually-hidden">Мы в Вконтакте</span>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+            <li class="socials__item">
+              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
                 <span class="visually-hidden">Мы в Ютубе</span>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <li class="socials__item">
+              <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
                 <span class="visually-hidden">Мы в Телеграме</span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="footer__developer developer">
-          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+          <a class="footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
             <span class="developer__text">HTML Academy</span>
             <img class="developer__image" src="#" width="27" height="34" alt="Логотип html academy">
           </a>
-        </div>
       </div>
     </footer>
   </body>
