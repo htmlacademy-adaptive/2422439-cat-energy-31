@@ -1,0 +1,9 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.programs__card-link {
+  @include mixins.set-font("Oswald", 400, normal, 16px, 16px);
+  color: variables.$black;
+  text-transform: uppercase;
+  text-decoration: none;
+}

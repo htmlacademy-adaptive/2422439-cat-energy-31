@@ -1,0 +1,18 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+
+.example__item-value {
+  @include mixins.set-font("Oswald", 400, normal, 24px, 24px);
+  color: variables.$black;
+}
+
+.example__item-text {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__cost {
+  @include mixins.set-font("Oswald", 400, normal, 14px, 20px);
+  color: variables.$black;
+}

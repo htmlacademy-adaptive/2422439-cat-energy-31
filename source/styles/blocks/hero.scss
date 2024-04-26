@@ -1,0 +1,9 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.hero__subtitle {
+  @include mixins.set-font("Oswald", 400, normal, 14px, 14px);
+  color: variables.$white;
+  background-color: $bg-basic-green;
+  opacity: 0.85;
+}

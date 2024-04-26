@@ -1,7 +1,7 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
-.header {
+.title-h2 {
+  @include mixins.set-font("Oswald", 400, normal, 36px, 40px);
   color: variables.$black;
-  padding: 10px 15px;
 }

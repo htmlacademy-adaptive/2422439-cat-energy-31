@@ -1,0 +1,15 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.button {
+  @include mixins.set-font("Oswald", 400, normal, 16px, 20px);
+  color: variables.$white;
+  background-color: variables.$bg-basic-green;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button--secondary {
+  color: variables.$base-color-grey;
+  background-color: variables.$bg-basic-grey;
+}

@@ -1,0 +1,13 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.contacts__text {
+  @include mixins.set-font("Oswald", 400, normal, 16px, 20px);
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  line-height: 20px;
+  text-decoration: none;
+}
