@@ -1,14 +1,8 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
-.contacts__text {
+.title-h4 {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 20px);
-  color: $font-color-accent;
+  color: variables.$font-color-secondary;
   text-transform: uppercase;
-}
-
-.contacts__address {
-  line-height: 20px;
-  font-style: normal;
-  text-decoration: none;
 }

@@ -1,9 +1,9 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
-.developer {
+.developer__text {
   font-size: 16px;
   line-height: 20px;
-  color: variables.$base-color-grey;
+  color: variables.$font-color-primary;
   text-decoration: none;
 }

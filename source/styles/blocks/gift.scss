@@ -1,1 +1,13 @@
-/* tslint:disable:no-empty */
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.gift {
+  background-color: variables.$bg-primary;
+  opacity: 0.85;
+}
+
+.gift__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: variables.$white;
+}

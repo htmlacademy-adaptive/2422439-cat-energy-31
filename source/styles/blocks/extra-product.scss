@@ -1,1 +1,11 @@
-/* tslint:disable:no-empty */
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.extra-product__title {
+  line-height: 16px;
+}
+
+.extra-product__text {
+  font-size: 14px;
+  line-height: 14px;
+}

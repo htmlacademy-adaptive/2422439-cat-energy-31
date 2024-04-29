@@ -2,7 +2,7 @@
 @use "../common/variables.scss";
 
 .navigation__list {
-  @include mixins.set-font("Oswald", 400, normal, 20px, 20px);
+  @include mixins.set-font($font-secondary, 400, normal, 20px, 20px);
   color: variables.$black;
   text-transform: uppercase;
 }

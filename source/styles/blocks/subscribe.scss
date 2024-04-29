@@ -1,1 +1,17 @@
-/* tslint:disable:no-empty */
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.subscribe__title {
+  @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
+  color: variables.$black;
+}
+
+.subscribe__text {
+  @include mixins.set-font($font-secondary, 400, normal, 16px, 24px);
+  color: variables.$black;
+}
+
+.form__input {
+  @include mixins.set-font($font-secondary, 400, normal, 20px, 30px);
+  color: variables.$font-color-primary;
+}

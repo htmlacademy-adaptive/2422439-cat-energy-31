@@ -2,8 +2,18 @@
 @use "mixins";
 @use "variables";
 
-body {
-  @include mixins.set-font("Lato", 400, normal, 14px, 18px);
-  color: variables.$base-color-grey;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   background-color: variables.$white;
+  height: 100%;
+}
+
+body {
+  @include mixins.set-font($font-primary, 400, normal, 14px, 18px);
+  color: variables.$font-color-primary;
 }

@@ -3,7 +3,7 @@
 
 
 .example__item-value {
-  @include mixins.set-font("Oswald", 400, normal, 24px, 24px);
+  @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
 }
 
@@ -13,6 +13,6 @@
 }
 
 .example__cost {
-  @include mixins.set-font("Oswald", 400, normal, 14px, 20px);
+  @include mixins.set-font($font-secondary, 400, normal, 14px, 20px);
   color: variables.$black;
 }

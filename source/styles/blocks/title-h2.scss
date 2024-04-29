@@ -2,6 +2,6 @@
 @use "../common/variables.scss";
 
 .title-h2 {
-  @include mixins.set-font("Oswald", 400, normal, 36px, 40px);
+  @include mixins.set-font($font-secondary, 400, normal, 36px, 40px);
   color: variables.$black;
 }
