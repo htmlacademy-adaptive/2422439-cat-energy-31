@@ -1,9 +1,34 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.developer {
+  position: relative;
+}
+
 .developer__text {
+  display: block;
   font-size: 16px;
   line-height: 20px;
   color: variables.$font-color-primary;
   text-decoration: none;
+}
+
+.developer__text::after {
+  content: "";
+  position: absolute;
+  mask-image: url("../../icons/stack.svg#developer-logo");
+  mask-repeat: no-repeat;
+  background-color: $icon-color;
+  mask-position: center;
+  min-width: 28px;
+  min-height: 22px;
+}
+
+.developer__text:hover::after {
+  background-color: $bg-primary;
+}
+
+.developer__text:active::after {
+  background-color: $bg-primary;
+  opacity: 0.3;
 }
