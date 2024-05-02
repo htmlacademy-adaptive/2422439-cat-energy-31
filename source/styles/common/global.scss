@@ -9,11 +9,24 @@
 }
 
 html {
-  background-color: variables.$white;
   height: 100%;
 }
 
 body {
   @include mixins.set-font($font-primary, 400, normal, 14px, 18px);
+  background-color: variables.$white;
   color: variables.$font-color-primary;
+  margin: 0;
+
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

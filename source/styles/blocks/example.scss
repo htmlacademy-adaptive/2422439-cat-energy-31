@@ -1,6 +1,13 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.example {
+  background-color: $bg-color-accent;
+}
+
+.example__title {
+  line-height: 40px;
+}
 
 .example__item-value {
   @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);

@@ -3,6 +3,7 @@
 
 .developer {
   position: relative;
+  text-decoration: none;
 }
 
 .developer__text {
@@ -10,25 +11,27 @@
   font-size: 16px;
   line-height: 20px;
   color: variables.$font-color-primary;
-  text-decoration: none;
-}
 
-.developer__text::after {
-  content: "";
-  position: absolute;
-  mask-image: url("../../icons/stack.svg#developer-logo");
-  mask-repeat: no-repeat;
-  background-color: $icon-color;
-  mask-position: center;
-  min-width: 28px;
-  min-height: 22px;
-}
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#developer-logo");
+    mask-repeat: no-repeat;
+    background-color: $icon-color;
+    mask-position: center;
+    min-width: 28px;
+    min-height: 22px;
+  }
 
-.developer__text:hover::after {
-  background-color: $bg-primary;
-}
+  &:hover::after {
+    background-color: $bg-primary;
+  }
 
-.developer__text:active::after {
-  background-color: $bg-primary;
-  opacity: 0.3;
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
+
+  &:active::after {
+    background-color: rgba($bg-primary, 0.3);
+  }
 }

@@ -2,4 +2,10 @@
 
 .title-h1 {
   @include mixins.set-font($font-secondary, 400, normal, 36px, 36px);
+  color: $black;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

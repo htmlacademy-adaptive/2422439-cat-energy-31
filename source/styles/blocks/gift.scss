@@ -2,6 +2,9 @@
 @use "../common/variables.scss";
 
 .gift {
+  display: block;
+  position: relative;
+  min-width: 280px;
   background-color: variables.$bg-primary;
   opacity: 0.85;
 }
@@ -10,4 +13,15 @@
   font-size: 16px;
   line-height: 20px;
   color: variables.$white;
+}
+
+.gift__text::before {
+  content: "";
+  position: absolute;
+  mask-image: url("../../icons/stack.svg#gift-icon");
+  mask-repeat: no-repeat;
+  background-color: $white;
+  mask-position: center;
+  min-width: 78px;
+  min-height: 81px;
 }

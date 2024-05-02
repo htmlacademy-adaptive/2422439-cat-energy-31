@@ -1,1 +1,26 @@
-/* tslint:disable:no-empty */
+.footer__logo {
+  display: inline-block;
+  position: relative;
+  height: 24px;
+}
+
+.footer__logo-image {
+  &::before {
+    content: "";
+    position: absolute;
+    mask-image: url("../../images/logo-footer-mobile.svg");
+    mask-repeat: no-repeat;
+    background-color: $font-color-accent;
+    mask-position: center;
+    min-width: 128px;
+    min-height: 24px;
+  }
+
+  &:hover::before {
+    background-color: #3e3e3e;
+  }
+
+  &:active::before {
+    background-color: #6b6b6b;
+  }
+}

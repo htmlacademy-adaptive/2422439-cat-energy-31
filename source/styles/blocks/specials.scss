@@ -1,1 +1,6 @@
-/* tslint:disable:no-empty */
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.specials__title {
+  line-height: 40px;
+}

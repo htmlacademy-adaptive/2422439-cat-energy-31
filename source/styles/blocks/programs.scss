@@ -1,6 +1,28 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.programs__card-image--slim::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/sitting-cat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 36px;
+  min-height: 50px;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.programs__card-image {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: $bg-primary;
+  border-radius: 50%;
+}
+
 .programs__card-link {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 16px);
   color: variables.$black;
