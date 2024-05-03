@@ -1,10 +1,55 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
+$burger-icon-size: 24px;
+
+.navigation__toggle {
+  position: relative;
+  background: none;
+  border: none;
+  min-width: $burger-icon-size;
+  min-height: $burger-icon-size;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#burger-icon");
+    mask-repeat: no-repeat;
+    background-color: $black;
+    mask-position: center;
+    min-width: $burger-icon-size;
+    min-height: $burger-icon-size;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+// .navigation {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .navigation__list {
   @include mixins.set-font($font-secondary, 400, normal, 20px, 20px);
   list-style: none;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .navigation__link {

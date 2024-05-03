@@ -4,3 +4,15 @@
 .header {
   padding: 10px 15px;
 }
+
+.header__wrapper {
+  display: flex;
+}
+
+// @media (min-width: $tablet-width) {
+//   .header {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
+// }
