@@ -1,6 +1,18 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.programs__card {
+  background-color: $bg-secondary;
+}
+
+.programs__card-image {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: $bg-primary;
+  border-radius: 50%;
+}
+
 .programs__card-image--slim::after {
   content: "";
   position: absolute;
@@ -15,17 +27,52 @@
   transform: translate(-50%, -50%);
 }
 
-.programs__card-image {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: $bg-primary;
-  border-radius: 50%;
+.programs__card-image--fat::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/walking-cat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 67px;
+  min-height: 28px;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
+
 
 .programs__card-link {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 16px);
   color: variables.$black;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#arrow-icon");
+    mask-repeat: no-repeat;
+    background-color: $black;
+    mask-position: -8px;
+    min-width: 32px;
+    min-height: 10px;
+    right: -12px;
+    transform: translate(100%, 50%);
+    transition: all ease 0.3s;
+  }
+
+  &:hover::after {
+    mask-position: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    mask-position: 0;
+    opacity: 0.3;
+  }
 }

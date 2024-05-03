@@ -3,11 +3,19 @@
 
 .navigation__list {
   @include mixins.set-font($font-secondary, 400, normal, 20px, 20px);
-  color: variables.$black;
+  list-style: none;
   text-transform: uppercase;
 }
 
 .navigation__link {
   color: variables.$black;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

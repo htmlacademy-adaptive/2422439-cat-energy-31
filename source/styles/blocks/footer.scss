@@ -2,9 +2,7 @@
   display: inline-block;
   position: relative;
   height: 24px;
-}
 
-.footer__logo-image {
   &::before {
     content: "";
     position: absolute;

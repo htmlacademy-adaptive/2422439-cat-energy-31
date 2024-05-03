@@ -9,7 +9,25 @@
   text-transform: uppercase;
 }
 
+.button--primary {
+  &:hover {
+    background-color: $bg-primary-special;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+}
+
 .button--secondary {
   color: variables.$font-color-primary;
   background-color: variables.$bg-secondary;
+
+  &:hover {
+    background-color: $bg-secondary-special;
+  }
+
+  &:active {
+    background-color: $bg-secondary-special;
+  }
 }

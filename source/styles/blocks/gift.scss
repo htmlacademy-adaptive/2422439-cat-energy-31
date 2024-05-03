@@ -10,6 +10,7 @@
 }
 
 .gift__text {
+  position: relative;
   font-size: 16px;
   line-height: 20px;
   color: variables.$white;
@@ -24,4 +25,8 @@
   mask-position: center;
   min-width: 78px;
   min-height: 81px;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
