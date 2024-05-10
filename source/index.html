@@ -22,11 +22,11 @@
           </picture>
           <img class="logo__text" src="images/logo-header-mobile.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
-        <nav class="header__navigation navigation">
-          <button class="navigation__toggle" type="button">
+        <nav class="header__navigation navigation navigation--nojs">
+          <button class="navigation__toggle navigation__toggle--closed" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <ul class="navigation__list">
+          <ul class="navigation__list navigation__list--open">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--current" href="#">Главная</a>
             </li>
@@ -42,7 +42,7 @@
     </header>
     <main class="main-container">
       <section class="hero">
-        <div class="hero__wrapper">
+        <div class="hero__wrapper container">
           <h1 class="hero__title title-h1">Функциональное питание для котов</h1>
           <p class="hero__subtitle">Занялся собой? Займись котом!</p>
           <picture>
@@ -53,16 +53,14 @@
           <a class="hero__button button button--primary" href="#">Подобрать программу</a>
         </div>
       </section>
-      <section class="programs">
+      <section class="programs container">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <div class="programs__card">
-          <div class="programs__card-image programs__card-image--slim"></div>
+        <div class="programs__card programs__card--slim programs__card--color">
           <h3 class="programs__card-title title-h2">Похудение</h3>
           <p class="programs__card-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programs__card-link" href="catalog.html">Каталог slim</a>
         </div>
-        <div class="programs__card">
-          <div class="programs__card-image programs__card-image--fat"></div>
+        <div class="programs__card programs__card--fat">
           <h3 class="programs__card-title title-h2">Набор массы</h3>
           <p class="programs__card-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="programs__card-link" href="catalog.html">Каталог pro</a>
@@ -102,7 +100,7 @@
                 <p class="example__item-text">затрачено времени</p>
               </li>
             </ul>
-            <p class="example__cost"><span>Затраты на питание:</span><span>15 000 РУБ.</span></p>
+            <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
             <div class="example__picture">
               <picture>
                 <source media="(min-width: 768px)" width="560" height="512" srcset="images/fat-cat-tablet@1x.png 1x, images/fat-cat-tablet@2x.png 2x" type="image/png">
@@ -112,7 +110,7 @@
                 <source media="(min-width: 768px)" width="560" height="512" srcset="images/slim-cat-tablet@1x.png 1x, images/slim-cat-tablet@2x.png 2x" type="image/png">
                 <img class="example__picture-image" src="images/slim-cat-mobile@1x.png" srcset="images/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Худой кот сидит">
               </picture>
-              <button class="example__picture-toggle" type="button" aria-label="Передвижение слайдера">Передвижение слайдера</button>
+              <button class="example__picture-toggle" type="button" aria-label="Передвижение слайдера"></button>
             </div>
           </div>
         </div>
@@ -121,7 +119,7 @@
         <div class="contacts__wrapper container">
           <div class="contacts__content">
             <h2 class="visually-hidden">Контакты</h2>
-            <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__text">Приглашаем<br> к сотрудничеству дилеров!</p>
             <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
         </div>
@@ -136,7 +134,7 @@
     <footer class="footer">
       <div class="footer__wrapper container">
         <a class="footer__logo" href="index.html">
-          <span class="visually-hidden">Кэт энерджи</span>
+          <img src="images/logo-footer-mobile.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
         <div class="footer__socials socials">
           <ul class="socials__list">

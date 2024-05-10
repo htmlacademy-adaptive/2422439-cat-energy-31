@@ -2,17 +2,27 @@
 @use "../common/variables.scss";
 
 .header {
-  padding: 10px 15px;
+  background-color: $bg-color-basic;
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+    border-bottom: 1px solid $border-color-secondary;
+    position: relative;
+  }
 }
 
 .header__wrapper {
-  display: flex;
-}
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+  }
 
-// @media (min-width: $tablet-width) {
-//   .header {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//   }
-// }
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+  }
+}

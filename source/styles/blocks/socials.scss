@@ -1,64 +1,50 @@
+.socials {
+  border-bottom: 1px solid $border-color-special;
+}
+
+.socials__list {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 132px;
+}
+
 .socials__link {
-  display: block;
-  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    mask-repeat: no-repeat;
+    background-color: $icon-color;
+    mask-position: center;
+    mask-size: contain;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover::after {
+    background-color: $primary-color;
+  }
+
+  &:active::after {
+    background-color: $primary-color;
+    opacity: 0.3;
+  }
 }
 
 .socials__link--vkontakte::after {
-  content: "";
-  position: absolute;
   mask-image: url("../../icons/stack.svg#vkontakte");
-  mask-repeat: no-repeat;
-  background-color: $icon-color;
-  mask-position: center;
-  min-width: 28px;
-  min-height: 22px;
-}
-
-.socials__link--vkontakte:hover::after {
-  background-color: $bg-primary;
-}
-
-.socials__link--vkontakte:active::after {
-  background-color: $bg-primary;
-  opacity: 0.3;
 }
 
 .socials__link--youtube::after {
-  content: "";
-  position: absolute;
   mask-image: url("../../icons/stack.svg#youtube");
-  mask-repeat: no-repeat;
-  background-color: $icon-color;
-  background-position: center;
-  min-width: 28px;
-  min-height: 22px;
-}
-
-.socials__link--youtube:hover::after {
-  background-color: $bg-primary;
-}
-
-.socials__link--youtube:active::after {
-  background-color: $bg-primary;
-  opacity: 0.3;
 }
 
 .socials__link--telegram::after {
-  content: "";
-  position: absolute;
   mask-image: url("../../icons/stack.svg#telegram");
-  mask-repeat: no-repeat;
-  background-color: $icon-color;
-  background-position: center;
-  min-width: 28px;
-  min-height: 22px;
-}
-
-.socials__link--telegram:hover::after {
-  background-color: $bg-primary;
-}
-
-.socials__link--telegram:active::after {
-  background-color: $bg-primary;
-  opacity: 0.3;
 }

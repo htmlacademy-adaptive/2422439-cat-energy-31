@@ -1,44 +1,61 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
 .programs__card {
   background-color: $bg-secondary;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: auto 1fr;
+  padding: 0 20px;
+
+  &::before {
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 570px;
+  }
 }
 
-.programs__card-image {
-  position: relative;
+.programs__card-description {
+  margin: 0;
+  padding: 22px 0;
+  grid-column: -1 / 1;
+  border-bottom: 1px solid $border-color-special;
+}
+
+// .programs__card-link {
+//   grid-column: -1 / 1;
+//   padding-top: 15px;
+// }
+
+.programs__card--slim::before {
+  background-image: url("../../icons/stack.svg#sitting-cat");
   width: 50px;
+  height: 53px;
+}
+
+.programs__card--fat::before {
+  content: "";
+  background-image: url("../../icons/stack.svg#walking-cat");
+  width: 67px;
   height: 50px;
-  background-color: $bg-primary;
-  border-radius: 50%;
-}
-
-.programs__card-image--slim::after {
-  content: "";
-  position: absolute;
-  background-image: url("../../images/sitting-cat.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 36px;
-  min-height: 50px;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-}
-
-.programs__card-image--fat::after {
-  content: "";
-  position: absolute;
-  background-image: url("../../images/walking-cat.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 67px;
-  min-height: 28px;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
 }
 
 
@@ -47,24 +64,25 @@
   color: variables.$black;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
+  grid-column: -1 / 1;
+  padding-top: 15px;
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
 
   &::after {
     content: "";
-    position: absolute;
     mask-image: url("../../icons/stack.svg#arrow-icon");
     mask-repeat: no-repeat;
     background-color: $black;
-    mask-position: -8px;
-    min-width: 32px;
-    min-height: 10px;
-    right: -12px;
-    transform: translate(100%, 50%);
-    transition: all ease 0.3s;
+    mask-position: -5px 0;
+    width: 27px;
+    height: 10px;
+    transition: mask-position 0.3s linear;
   }
 
   &:hover::after {
-    mask-position: 0;
+    mask-position: 0 0;
   }
 
   &:active {
@@ -72,7 +90,7 @@
   }
 
   &:active::after {
-    mask-position: 0;
+    mask-position: 0 0;
     opacity: 0.3;
   }
 }

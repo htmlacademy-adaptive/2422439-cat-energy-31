@@ -8,6 +8,11 @@
 
 .product-card {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  padding: 20px 0 25px;
+  border-bottom: 1px solid $border-color-secondary;
 }
 
 .product-card__title {
@@ -31,4 +36,12 @@
 .product-card__text {
   font-size: 12px;
   line-height: 16px;
+}
+
+.product-card__picture {
+  grid-row: 1/-2;
+}
+
+.product-card__button {
+  grid-column: 1/-1;
 }

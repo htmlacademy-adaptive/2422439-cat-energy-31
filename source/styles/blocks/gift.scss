@@ -3,30 +3,28 @@
 
 .gift {
   display: block;
-  position: relative;
   min-width: 280px;
-  background-color: variables.$bg-primary;
+  min-height: 290px;
+  background-color: variables.$primary-color;
   opacity: 0.85;
+
+  &::before {
+    display: block;
+    content: "";
+    mask-image: url("../../icons/stack.svg#gift-icon");
+    mask-repeat: no-repeat;
+    background-color: $white;
+    mask-position: center;
+    min-width: 78px;
+    min-height: 81px;
+    left: 0;
+    top: 0;
+  }
 }
 
 .gift__text {
-  position: relative;
   font-size: 16px;
   line-height: 20px;
   color: variables.$white;
-}
-
-.gift__text::before {
-  content: "";
-  position: absolute;
-  mask-image: url("../../icons/stack.svg#gift-icon");
-  mask-repeat: no-repeat;
-  background-color: $white;
-  mask-position: center;
-  min-width: 78px;
-  min-height: 81px;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }

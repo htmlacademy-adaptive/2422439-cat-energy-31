@@ -3,13 +3,18 @@
 
 .button {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 20px);
-  color: variables.$white;
-  background-color: variables.$bg-primary;
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button--primary {
+  color: variables.$white;
+  background-color: variables.$primary-color;
+
   &:hover {
     background-color: $bg-primary-special;
   }

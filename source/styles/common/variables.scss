@@ -3,15 +3,17 @@ $font-primary: "Lato", "Arial", sans-serif;
 $font-secondary: "Oswald", "Arial", sans-serif;
 
 $tablet-width: 768px;
-$desktop-width: 1200px;
-$mobile-width-only: 767px;
+$desktop-width: 1440px;
+$mobile-width-only: $tablet-width - 1;
 
 $font-color-primary: #444444;
 $font-color-secondary: #222222;
 $font-color-accent: #111111;
 
 
-$bg-primary: #68b738;
+$primary-color: #68b738;
+
+$bg-color-basic: #ffffff;
 $bg-primary-special: #5eaa2f;
 $bg-secondary: #f2f2f2;
 $bg-secondary-special: #ebebeb;
