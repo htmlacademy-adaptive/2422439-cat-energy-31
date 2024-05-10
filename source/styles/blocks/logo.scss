@@ -1,7 +1,9 @@
 .logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;

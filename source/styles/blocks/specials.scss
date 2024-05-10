@@ -1,8 +1,40 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.specials {
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
+}
+
 .specials__list {
+  padding: 0;
+  margin: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 153px;
+    // column-gap: 153px;
+    // row-gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 94px;
+  }
 }
 
 .specials__title {
@@ -10,7 +42,8 @@
 }
 
 .specials__item {
-  position: relative;
+  display: flex;
+  gap: 20px;
 }
 
 .specials__item::before {
@@ -18,9 +51,15 @@
   content: "";
   width: 60px;
   height: 60px;
-  background-color: $bg-primary;
+  background-color: $primary-color;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 30px;
+}
+
+.specials__item-description {
+  margin: 0;
+  align-self: center;
 }
 
 .specials__item--healthy::before {

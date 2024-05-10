@@ -1,24 +1,20 @@
+.footer {
+  text-align: center;
+  background-color: $bg-secondary;
+  padding: 20px 0;
+}
+
 .footer__logo {
-  display: inline-block;
-  position: relative;
-  height: 24px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-color-special;
 
-  &::before {
-    content: "";
-    position: absolute;
-    mask-image: url("../../images/logo-footer-mobile.svg");
-    mask-repeat: no-repeat;
-    background-color: $font-color-accent;
-    mask-position: center;
-    min-width: 128px;
-    min-height: 24px;
+  &:hover {
+    opacity: 0.8;
   }
 
-  &:hover::before {
-    background-color: #3e3e3e;
-  }
-
-  &:active::before {
-    background-color: #6b6b6b;
+  &:active {
+    opacity: 0.6;
   }
 }
