@@ -13,3 +13,26 @@
     opacity: 0.6;
   }
 }
+
+// .logo__image {
+//   @media (min-width: $tablet-width) {
+//     margin-right: 13px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     margin-right: 14px;
+//   }
+// }
+
+.logo__text {
+  @media (min-width: $tablet-width) {
+    min-width: 101px;
+    margin-left: 13px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 118px;
+    margin-left: 14px;
+  }
+}

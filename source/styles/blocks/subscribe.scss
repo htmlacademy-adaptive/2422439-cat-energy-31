@@ -1,17 +1,75 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.subscribe {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
 .subscribe__title {
   @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .subscribe__text {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 24px);
   color: variables.$black;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 100px;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+  }
 }
 
 .form__input {
   @include mixins.set-font($font-secondary, 400, normal, 20px, 30px);
   color: variables.$font-color-primary;
+
+  @media (min-width: $tablet-width) {
+    min-width: 376px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 496px;
+  }
+}
+
+.subscribe__button {
+  @media (min-width: $tablet-width) {
+    width: 256px;
+  }
 }

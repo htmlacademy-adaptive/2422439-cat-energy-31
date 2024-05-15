@@ -13,12 +13,32 @@
   @include mixins.set-font($font-secondary, 400, normal, 16px, 20px);
   color: $font-color-accent;
   text-transform: uppercase;
-  min-width: 140px;
+  max-width: 140px;
+
+  @media (min-width: $tablet-width) {
+    @include mixins.set-font($font-secondary, 400, normal, 20px, 26px);
+    max-width: 165px;
+  }
 }
 
 .contacts__address {
   line-height: 20px;
   font-style: normal;
   text-decoration: none;
-  min-width: 140px;
+  max-width: 140px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 160px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__address span {
+    display: block;
+    margin-top: 18px;
+  }
+}
+
+.contacts__map {
+  width: 100%;
 }

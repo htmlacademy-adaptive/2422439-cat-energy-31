@@ -1,29 +1,22 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
-$burger-icon-size: 24px;
 
 .navigation__toggle {
   background: none;
   border: none;
-  min-width: $burger-icon-size;
-  min-height: $burger-icon-size;
-  position: absolute;
-  top: 50%;
-  right: 20px;
+  width: 30px;
+  height: 40px;
 
   &::before {
-    display: block;
-    position: absolute;
     content: "";
+    display: block;
     mask-image: url("../../icons/stack.svg#burger-icon");
     mask-repeat: no-repeat;
     background-color: $black;
     mask-position: center;
-    min-width: $burger-icon-size;
-    min-height: $burger-icon-size;
-    top: 50%;
-    left: 20px;
-    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    mask-size: contain;
   }
 
   &:hover::before {
@@ -40,17 +33,7 @@ $burger-icon-size: 24px;
 }
 
 .navigation__toggle--closed::before {
-  display: block;
-  content: "";
   mask-image: url("../../icons/stack.svg#close-icon");
-  mask-repeat: no-repeat;
-  background-color: $black;
-  mask-position: center;
-  min-width: $burger-icon-size;
-  min-height: $burger-icon-size;
-  position: absolute;
-  top: 50%;
-  left: 20px;
 }
 
 .navigation__list {
@@ -69,10 +52,10 @@ $burger-icon-size: 24px;
     display: flex;
     flex-flow: wrap;
     flex-direction: row;
-    // flex-wrap: wrap;
     justify-content: end;
     gap: 33px;
     min-width: 440px;
+    padding: 10px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -87,7 +70,7 @@ $burger-icon-size: 24px;
     position: absolute;
     display: block;
     text-align: center;
-    top: 100%;
+    top: calc(100% + 1px);
     left: 0;
     width: 100vw;
     z-index: 1;
@@ -120,6 +103,7 @@ $burger-icon-size: 24px;
   }
 
   @media (min-width: $desktop-width) {
+    // padding: 10px 0;
     color: $white;
     background-color: $primary-color;
   }
@@ -132,7 +116,7 @@ $burger-icon-size: 24px;
     background-color: $primary-color;
     height: 2px;
     left: 0;
-    bottom: 0;
+    bottom: -8px;
     right: 0;
   }
 }

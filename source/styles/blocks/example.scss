@@ -29,28 +29,26 @@
 }
 
 .example__title {
-  margin: 0;
+  margin: 0 0 40px;
   line-height: 40px;
-  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
-    padding-bottom: 60px;
+    margin: 0 0 60px;
   }
 }
 
 .example__text {
-  margin: 0;
-  padding-bottom: 20px;
+  margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
-    padding-bottom: 55px;
+    margin: 0 0 55px;
   }
 }
 
 .example__list {
-  margin: 0;
+  margin: 0 0 34px;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -59,6 +57,7 @@
 
   @media (min-width: $tablet-width) {
     justify-content: start;
+    margin: 0 0 104px;
   }
 }
 
@@ -69,6 +68,11 @@
   height: 56px;
   border: 1px solid $border-color-primary;
   border-radius: 1px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .example__item-value {
@@ -76,17 +80,33 @@
   color: variables.$black;
   margin: 10px auto;
   align-self: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__item-text {
   font-size: 12px;
   line-height: 12px;
-  margin-top: 0;
+  margin: 0;
   text-align: center;
   align-self: center;
   background-color: $bg-color-accent;
-  width: 77px;
-  height: 24px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 77px;
+    height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $bg-color-basic;
+    padding: 0 5px;
+    margin-top: 5px;
+  }
 }
 
 .example__cost {
@@ -94,6 +114,7 @@
   color: variables.$black;
   text-align: center;
   text-transform: uppercase;
+  margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
     @include mixins.set-font($font-secondary, 400, normal, 20px, 20px);

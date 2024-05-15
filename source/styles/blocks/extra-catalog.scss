@@ -1,13 +1,46 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.extra-catalog {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 80px;
+  }
+}
+
+
 .extra-catalog__title {
   @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    margin-right: -20px;
+    width: fit-content;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .extra-catalog__title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    // width: 11%;
+    width: 100vw;
+    background-color: $border-color-accent;
+    top: 50%;
+    right: 0;
+  }
 }
 
 .extra-catalog__list {
-  margin: 0;
-  padding: 0 0 35px;
+  margin: 0 0 35px;
+  padding: 0;
   list-style-type: none;
 }

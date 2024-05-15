@@ -1,6 +1,18 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
+.catalog {
+  @media (max-width: $mobile-width-only) {
+    padding: 0;
+  }
+}
+
+.catalog__title {
+  @media (max-width: $mobile-width-only) {
+    padding: 0 20px;
+  }
+}
+
 .catalog__list {
   margin: 0;
   padding: 0;
@@ -9,5 +21,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px 63px;
   }
 }

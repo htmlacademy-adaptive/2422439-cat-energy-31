@@ -19,7 +19,7 @@
   display: grid;
   column-gap: 20px;
   grid-template-columns: auto 1fr;
-  padding: 0 20px;
+  padding: 21px 20px 18px;
 
   &::before {
     display: block;
@@ -28,8 +28,65 @@
     background-position: center;
   }
 
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr auto;
+    padding: 77px 29px 53px 52px;
+  }
+
   @media (min-width: $desktop-width) {
+    grid-template-columns: auto 1fr;
+    column-gap: 47px;
+    padding: 41px 61px 55px 52px;
     min-width: 570px;
+  }
+}
+
+.programs__card--slim::before {
+  background-image: url("../../icons/stack.svg#sitting-cat");
+  width: 50px;
+  height: 53px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 211px;
+    grid-row: span 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 106px;
+    grid-row: 1/2;
+  }
+}
+
+.programs__card--fat::before {
+  background-image: url("../../icons/stack.svg#walking-cat");
+  width: 67px;
+  height: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+    grid-row: span 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 100px;
+    grid-row: 1/2;
+  }
+}
+
+.programs__card-title {
+  align-self: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
   }
 }
 
@@ -38,26 +95,21 @@
   padding: 22px 0;
   grid-column: -1 / 1;
   border-bottom: 1px solid $border-color-special;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -2;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: -1 / 1;
+  }
 }
 
 // .programs__card-link {
 //   grid-column: -1 / 1;
 //   padding-top: 15px;
 // }
-
-.programs__card--slim::before {
-  background-image: url("../../icons/stack.svg#sitting-cat");
-  width: 50px;
-  height: 53px;
-}
-
-.programs__card--fat::before {
-  content: "";
-  background-image: url("../../icons/stack.svg#walking-cat");
-  width: 67px;
-  height: 50px;
-}
-
 
 .programs__card-link {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 16px);
