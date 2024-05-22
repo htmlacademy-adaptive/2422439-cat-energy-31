@@ -70,11 +70,12 @@
     position: absolute;
     display: block;
     text-align: center;
-    top: calc(100% + 1px);
+    top: 100%;
     left: 0;
     width: 100vw;
-    z-index: 1;
+    z-index: 3;
     background-color: $bg-color-basic;
+    // display: none;
   }
 }
 
@@ -105,7 +106,19 @@
   @media (min-width: $desktop-width) {
     // padding: 10px 0;
     color: $white;
-    background-color: $primary-color;
+    // background-color: $primary-color;
+  }
+}
+
+.navigation__link--color {
+  @media (min-width: $desktop-width) {
+    color: $black;
+  }
+}
+
+.navigation__link:first-child {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $border-color-secondary;
   }
 }
 
@@ -118,5 +131,9 @@
     left: 0;
     bottom: -8px;
     right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-color: $bg-color-basic;
   }
 }

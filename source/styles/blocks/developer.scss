@@ -8,6 +8,7 @@
 .developer__text {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
   font-size: 16px;
   line-height: 20px;
@@ -19,8 +20,8 @@
     mask-repeat: no-repeat;
     background-color: $icon-color;
     mask-position: center;
-    width: 28px;
-    height: 22px;
+    width: 27px;
+    height: 34px;
   }
 
   &:hover::after {
@@ -33,5 +34,11 @@
 
   &:active::after {
     background-color: rgba($primary-color, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+    justify-content: end;
+    padding: 0;
   }
 }

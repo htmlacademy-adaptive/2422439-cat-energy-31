@@ -1,5 +1,10 @@
 .socials {
   border-bottom: 1px solid $border-color-special;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    border: none;
+  }
 }
 
 .socials__list {
@@ -8,8 +13,16 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 132px;
+  justify-content: center;
+  gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 26px;
+  }
 }
 
 .socials__link {

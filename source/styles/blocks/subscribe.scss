@@ -19,6 +19,10 @@
 .subscribe__title {
   @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
+  position: relative;
+  width: fit-content;
+  background-color: $bg-color-basic;
+  box-shadow: -30px 0 0 0 $bg-color-basic, 30px 0 0 0 $bg-color-basic;
 
   @media (min-width: $tablet-width) {
     font-size: 32px;
@@ -29,6 +33,19 @@
     font-size: 40px;
     line-height: 40px;
   }
+}
+
+.subscribe__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: $border-color-accent;
+  box-shadow: 100vw 0 0 $border-color-accent;
+  z-index: -1;
+  width: 100vw;
+  top: 50%;
+  right: 0;
 }
 
 .subscribe__text {

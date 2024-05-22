@@ -2,7 +2,7 @@
 @use "../common/variables.scss";
 
 .header {
-  background-color: $bg-color-basic;
+  // background-color: $bg-color-basic;
 
   @media (max-width: $mobile-width-only) {
     display: flex;

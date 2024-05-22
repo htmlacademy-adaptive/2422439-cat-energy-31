@@ -19,14 +19,16 @@
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
+    gap: 60px;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     gap: 80px 63px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
   }
 }
