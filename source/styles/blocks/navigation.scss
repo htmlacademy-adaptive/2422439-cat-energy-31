@@ -75,12 +75,13 @@
     width: 100vw;
     z-index: 3;
     background-color: $bg-color-basic;
-    // display: none;
   }
 }
 
 .navigation__list:not(.navigation__list--open) {
-  display: none;
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .navigation__link {
@@ -98,42 +99,67 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $mobile-width-only) {
-    padding: 22px 0 24px;
-    border-bottom: 1px solid $border-color-secondary;
-  }
+  // &--color {
+  //   color: $black;
+  // }
+
+  // @media (min-width: $tablet-width) {
+
+  // }
 
   @media (min-width: $desktop-width) {
     // padding: 10px 0;
     color: $white;
-    // background-color: $primary-color;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 22px 0 24px;
+  }
+}
+
+.navigation__item {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $border-color-secondary;
+
+    &:last-child {
+      border-bottom: 1px solid $border-color-secondary;
+    }
   }
 }
 
 .navigation__link--color {
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     color: $black;
   }
 }
 
-.navigation__link:first-child {
-  @media (max-width: $mobile-width-only) {
-    border-top: 1px solid $border-color-secondary;
+// .navigation__link:first-child {
+//   @media (max-width: $mobile-width-only) {
+//     border-top: 1px solid $border-color-secondary;
+//   }
+// }
+
+.navigation__link--current,
+.navigation__link--current-accent {
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      background-color: $primary-color;
+      height: 2px;
+      left: 0;
+      bottom: -8px;
+      right: 0;
+    }
+
+    // @media (min-width: $desktop-width) {
+    //   background-color: $bg-color-basic;
+    // }
   }
 }
 
 .navigation__link--current::after {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    content: "";
-    background-color: $primary-color;
-    height: 2px;
-    left: 0;
-    bottom: -8px;
-    right: 0;
-  }
-
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     background-color: $bg-color-basic;
   }
 }

@@ -18,18 +18,54 @@
   @media (min-width: $desktop-width) {
     padding-top: 110px;
     min-height: 580px;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   background-image:
+    //     linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    //     image-set("../../images/bg-hero-cat-desktop@1x.webp" type("image/webp"),
+    //     "../../images/bg-hero-cat-desktop@1x.jpg" type("image/jpeg")),
+    //     linear-gradient(to left, #3f3e46, #404145);
+
+    //   @media (min-resolution: 2dppx) {
+    //     background-size: cover;
+    //     background-image:
+    //       linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    //       image-set("../../images/bg-hero-cat-desktop@2x.webp" type("image/webp"),
+    //       "../../images/bg-hero-cat-desktop@2x.jpg" type("image/jpeg")),
+    //       linear-gradient(to left, #3f3e46, #404145);
+    //   }
+
+    //   background-repeat: no-repeat;
+    //   background-size: auto;
+    //   right: 0;
+    //   top: 0;
+    //   height: 694px;
+    //   height: calc(100% - 114px);
+    //   width: 50%;
+    //   z-index: -1;
+    // }
   }
 
   @media (max-width: $mobile-width-only) {
     &::before {
       content: "";
-      // display: block;
       position: absolute;
       background-image:
         linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../../images/bg-hero-cat-mobile@1x.jpg"),
+        image-set("../../images/bg-hero-cat-mobile@1x.webp" type("image/webp"),
+        "../../images/bg-hero-cat-mobile@1x.jpg" type("image/jpeg")),
         linear-gradient(to left, #3f3e46, #585760);
       // background-image: url("../../images/bg-hero-cat-mobile@1x.jpg"), linear-gradient(to left, #3f3e46, #585760);
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          image-set("../../images/bg-hero-cat-mobile@2x.webp" type("image/webp"),
+          "../../images/bg-hero-cat-mobile@2x.jpg" type("image/jpeg")),
+          linear-gradient(to left, #3f3e46, #585760);
+      }
       background-position: center top;
       background-repeat: no-repeat;
       background-size: auto 302px;
@@ -37,7 +73,38 @@
       height: 302px;
       top: 0;
       left: 0;
+      z-index: -1;
     }
+  }
+}
+
+.hero::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    background-image:
+      linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set("../../images/bg-hero-cat-desktop@1x.webp" type("image/webp"),
+      "../../images/bg-hero-cat-desktop@1x.jpg" type("image/jpeg")),
+      linear-gradient(to left, #3f3e46, #404145);
+
+    @media (min-resolution: 2dppx) {
+      background-size: cover;
+      background-image:
+        linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        image-set("../../images/bg-hero-cat-desktop@2x.webp" type("image/webp"),
+        "../../images/bg-hero-cat-desktop@2x.jpg" type("image/jpeg")),
+        linear-gradient(to left, #3f3e46, #404145);
+    }
+
+    background-repeat: no-repeat;
+    background-size: auto;
+    right: 0;
+    top: 0;
+    height: 694px;
+    // height: calc(100% - 114px);
+    width: 50%;
+    z-index: -1;
   }
 }
 
@@ -54,26 +121,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    padding-left: 190px;
+    position: relative;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: auto auto auto;
+    padding-left: 110px;
+    max-width: 470px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-image:
-        linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../../images/bg-hero-cat-desktop@1x.jpg"),
-        linear-gradient(to left, #3f3e46, #585760);
-      background-repeat: no-repeat;
-      background-size: auto;
-      right: 0;
-      top: 0;
-      height: 694px;
-      width: 50%;
-      z-index: -1;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   background-image:
+    //     linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    //     url("../../images/bg-hero-cat-desktop@1x.jpg"),
+    //     linear-gradient(to left, #3f3e46, #585760);
+    //   background-repeat: no-repeat;
+    //   background-size: auto;
+    //   right: 0;
+    //   top: 0;
+    //   height: 694px;
+    //   width: 50%;
+    //   z-index: -1;
+    // }
   }
 }
 
@@ -89,9 +158,9 @@
     margin: 0 0 40px;
   }
 
-  @media (min-width: $desktop-width) {
-    position: relative;
-  }
+  // @media (min-width: $desktop-width) {
+  //   position: relative;
+  // }
 }
 
 .hero__subtitle {
@@ -131,10 +200,12 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    // margin-top: 29px;
+    margin: 0;
     // top: 50%;
-    left: 50%;
-    transform: translate(-13%, -10%);
+    left: 100%;
+    // transform: translate(-13%, -10%);
+    grid-column: 2/3;
+    grid-row: 1/-1;
   }
 }
 

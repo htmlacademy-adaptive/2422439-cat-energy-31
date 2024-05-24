@@ -2,6 +2,11 @@
 @use "../common/variables.scss";
 
 .catalog {
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 74px;
+  }
+
   @media (max-width: $mobile-width-only) {
     padding: 0;
   }
@@ -19,16 +24,18 @@
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     gap: 60px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: end;
+    justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 80px 63px;
+    gap: 63px 80px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
   }
 }

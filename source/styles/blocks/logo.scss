@@ -12,6 +12,11 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (max-width: $mobile-width-only) {
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }
 
 // .logo__image {
@@ -34,5 +39,9 @@
   @media (min-width: $desktop-width) {
     min-width: 118px;
     margin-left: 14px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
   }
 }

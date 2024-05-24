@@ -42,15 +42,20 @@
     </header>
     <main class="main-container">
       <section class="hero">
-        <div class="hero__wrapper container">
-          <h1 class="hero__title title-h1">Функциональное<br> питание для котов</h1>
-          <p class="hero__subtitle">Занялся собой? Займись котом!</p>
-          <a class="hero__button button button--primary" href="#">Подобрать программу</a>
-          <picture>
-            <source media="(min-width: 1440px)" width="552" height="499" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x" type="image/png">
-            <source media="(min-width: 768px)" width="709" height="609" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x" type="image/png">
-            <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Банка с питанием для котов Cat energy">
-          </picture>
+        <div class="container">
+          <div class="hero__wrapper">
+            <h1 class="hero__title title-h1">Функциональное<br> питание для котов</h1>
+            <p class="hero__subtitle">Занялся собой? Займись котом!</p>
+            <a class="hero__button button button--primary" href="#">Подобрать программу</a>
+            <picture>
+              <source media="(min-width: 1440px)" width="552" height="499" srcset="images/hero-desktop@1x.webp 1x, images/hero-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" width="709" height="609" srcset="images/hero-tablet@1x.webp 1x, images/hero-tablet@2x.webp 2x" type="image/webp">
+              <source width="280" height="270" srcset="images/hero-mobile@1x.webp 1x, images/hero-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" width="552" height="499" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x" type="image/png">
+              <source media="(min-width: 768px)" width="709" height="609" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x" type="image/png">
+              <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Банка с питанием для котов Cat energy">
+            </picture>
+          </div>
         </div>
       </section>
       <section class="programs container">
@@ -103,10 +108,14 @@
             <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
             <div class="example__picture slider" style="--curtain-place: 0.5;">
               <picture>
+                <source media="(min-width: 768px)" width="560" height="512" srcset="images/fat-cat-tablet@1x.webp 1x, images/fat-cat-tablet@2x.webp 2x" type="image/webp">
+                <source width="280" height="256" srcset="images/fat-cat-mobile@1x.webp 1x, images/fat-cat-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" width="560" height="512" srcset="images/fat-cat-tablet@1x.png 1x, images/fat-cat-tablet@2x.png 2x" type="image/png">
                 <img class="example__picture-image slider__image slider__image--state-before" src="images/fat-cat-mobile@1x.png" srcset="images/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот сидит">
               </picture>
               <picture>
+                <source media="(min-width: 768px)" width="560" height="512" srcset="images/slim-cat-tablet@1x.webp 1x, images/slim-cat-tablet@2x.webp 2x" type="image/webp">
+                <source width="280" height="256" srcset="images/slim-cat-mobile@1x.webp 1x, images/slim-cat-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" width="560" height="512" srcset="images/slim-cat-tablet@1x.png 1x, images/slim-cat-tablet@2x.png 2x" type="image/png">
                 <img class="example__picture-image slider__image slider__image--state-after" src="images/slim-cat-mobile@1x.png" srcset="images/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Худой кот сидит">
               </picture>
@@ -125,12 +134,15 @@
         </div>
         <noscript>
           <picture>
+            <source media="(min-width: 1440px)" width="1440" height="400" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" width="768" height="400" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" type="image/webp">
+            <source width="320" height="362" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" type="image/webp">
             <source media="(min-width: 1440px)" width="1440" height="400" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" type="image/png">
             <source media="(min-width: 768px)" width="768" height="400" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" type="image/png">
             <img class="contacts__map" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Карта места расположения">
           </picture>
         </noscript>
-        <div class="contacts__map">
+        <div class="contacts__map-iframe">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sus!4v1716360650734!5m2!1sru!2sus" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>

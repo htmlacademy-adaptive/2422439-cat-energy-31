@@ -12,11 +12,19 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 3fr 2fr 1fr;
+    padding: 26px 38px 28px;
+    border-top: 1px solid $border-color-primary;
+    border-left: 1px solid $border-color-primary;
+    border-right: 1px solid $border-color-primary;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: minmax(340px, 1fr) 1fr 1fr 1fr;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    padding: 25px 0;
   }
 }
 
@@ -34,6 +42,10 @@
   @media (min-width: $tablet-width) {
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .extra-product__text {
@@ -47,6 +59,12 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: start;
   }
 }
 
@@ -55,12 +73,20 @@
     font-size: 14px;
     line-height: 14px;
     margin: 0 0 15px;
-    text-align: right;
+    text-align: end;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    vertical-align: middle;
+    margin: 0;
+    text-align: end;
+    margin-right: 40px;
   }
 }
 
@@ -69,5 +95,6 @@
 
   @media (min-width: $desktop-width) {
     grid-column: auto;
+    min-width: 244px;
   }
 }
