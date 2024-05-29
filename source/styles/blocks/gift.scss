@@ -4,10 +4,7 @@
 .gift {
   display: block;
   min-width: 280px;
-  // min-height: 290px;
-  background-color: variables.$primary-color;
-  opacity: 0.85;
-  padding: 59px 0 43px;
+  padding: 58px 0 43px;
 
   @media (max-width: $mobile-width-only) {
     background-image:
@@ -45,7 +42,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 57px 125px 60px 77px;
+    padding: 59px 125px 60px 79px;
   }
 
   @media (min-width: $desktop-width) {
@@ -81,6 +78,10 @@
     min-height: 81px;
     left: 0;
     top: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 48px;
+    }
   }
 }
 
@@ -98,9 +99,13 @@
     align-self: center;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     text-align: center;
-    padding-top: 48px;
-    display: block;
   }
+
+  // @media (min-width: $tablet-width) {
+  //   text-align: center;
+  //   padding-top: 48px;
+  //   display: block;
+  // }
 }

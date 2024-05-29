@@ -5,7 +5,7 @@
   padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 45px;
+    padding: 46px 0;
     border-bottom: 1px solid $border-color-secondary;
   }
 
@@ -29,19 +29,28 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 153px;
+    gap: 37px 59px;
     counter-reset: specials 0;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 94px;
+    column-gap: 80px;
   }
 }
 
 .specials__title {
   line-height: 40px;
+  margin: 20px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 9px 0 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 10px 0 42px;
+  }
 }
 
 .specials__item {
@@ -51,15 +60,15 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: start;
-    // gap: 31px;
-    // width: 250px;
-    // min-height: 280px;
     display: block;
     padding: 40px 0;
     min-height: 280px;
+    margin-right: 76px;
+    max-width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -3px;
   }
 }
 
@@ -97,29 +106,45 @@
 
 .specials__item-description {
   margin: 0;
-  align-self: center;
+  // align-self: center;
 
   @media (min-width: $tablet-width) {
-    max-width: 243px;
+    max-width: 245px;
   }
 }
 
 .specials__item--healthy::before {
   background-image: url("../../icons/stack.svg#leaf-icon");
-  background-size: 30px 32px;
+  background-size: 30px 28px;
 }
 
 .specials__item--easy::before {
   background-image: url("../../icons/stack.svg#glass-icon");
-  background-size: 26px 29px;
+  background-size: 27px 29px;
 }
 
 .specials__item--replace::before {
   background-image: url("../../icons/stack.svg#eat-icon");
-  background-size: 25px 30px;
+  background-size: 26px 30px;
 }
 
 .specials__item--result::before {
   background-image: url("../../icons/stack.svg#clock-icon");
   background-size: 27px 31px;
+}
+
+.specials__item--healthy {
+  @media (min-width: $tablet-width) {
+    margin-right: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 7px;
+  }
+}
+
+.specials__item-description br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

@@ -16,16 +16,21 @@
   justify-content: space-between;
   padding: 26px 0;
 
+  @media (min-width: $tablet-width) {
+    padding: 60px 40px;
+  }
+
   @media (min-width: $desktop-width) {
     content: "";
     position: absolute;
     background-color: $bg-color-basic;
     z-index: 1;
-    top: 25%;
-    padding: 60px 79px;
-    max-width: 565px;
+    top: calc(25% - 5px);
+    padding: 61px 75px 60px 80px;
     min-width: 565px;
     display: flex;
+    justify-content: initial;
+    gap: 85px;
   }
 }
 
@@ -52,15 +57,24 @@
 
   @media (min-width: $tablet-width) {
     max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    gap: 18px;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .contacts__address span {
-    display: block;
-    margin-top: 18px;
-  }
-}
+// @media (min-width: $tablet-width) {
+//   .contacts__address span {
+//     display: block;
+//     margin-top: 18px;
+//   }
+// }
 
 .contacts__map {
   width: 100%;

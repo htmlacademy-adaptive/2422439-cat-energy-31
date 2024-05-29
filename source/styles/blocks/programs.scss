@@ -7,6 +7,10 @@
   gap: 20px;
   align-self: center;
 
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row;
@@ -20,7 +24,7 @@
   display: grid;
   column-gap: 20px;
   grid-template-columns: auto 1fr;
-  padding: 21px 20px 18px;
+  padding: 21px 20px 22px;
 
   &::before {
     display: block;
@@ -31,13 +35,14 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr auto;
-    padding: 77px 29px 53px 52px;
+    column-gap: 24px;
+    padding: 76px 29px 57px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: auto 1fr;
-    column-gap: 47px;
-    padding: 41px 61px 55px 52px;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 62px;
+    padding: 41px 61px 59px 52px;
     min-width: 570px;
   }
 }
@@ -51,12 +56,14 @@
     width: 200px;
     height: 211px;
     grid-row: span 3;
+    margin: 5px 34px 0 23px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100px;
     height: 106px;
     grid-row: 1/2;
+    margin: 0;
   }
 }
 
@@ -64,26 +71,48 @@
   background-image: url("../../icons/stack.svg#walking-cat");
   width: 67px;
   height: 50px;
+  margin: 3px -8px 0;
 
   @media (min-width: $tablet-width) {
     width: 268px;
     height: 200px;
     grid-row: span 3;
+    margin: 15px 0 25px;
   }
 
   @media (min-width: $desktop-width) {
     width: 134px;
     height: 100px;
     grid-row: 1/2;
+    margin: 4px -19px 0;
+  }
+}
+
+.programs__card--fat {
+  @media (min-width: $tablet-width) {
+    padding: 76px 29px 56px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 43px 29px 59px 52px;
+  }
+}
+
+.programs__card--fat .programs__card-title {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin-left: -7px;
   }
 }
 
 .programs__card-title {
   align-self: center;
   margin: 0;
+  margin-top: 1px;
 
   @media (min-width: $tablet-width) {
     order: -1;
+    margin-bottom: 2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -100,17 +129,14 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -2;
     border-bottom: none;
+    padding: 21px 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: -1 / 1;
+    padding: 39px 0 27px;
   }
 }
-
-// .programs__card-link {
-//   grid-column: -1 / 1;
-//   padding-top: 15px;
-// }
 
 .programs__card-link {
   @include mixins.set-font($font-secondary, 400, normal, 16px, 16px);
@@ -118,7 +144,8 @@
   text-transform: uppercase;
   text-decoration: none;
   grid-column: -1 / 1;
-  padding-top: 15px;
+  padding-top: 19px;
+  padding-left: 1px;
   display: inline-flex;
   gap: 15px;
   align-items: center;
@@ -129,7 +156,7 @@
     mask-repeat: no-repeat;
     background-color: $black;
     mask-position: -5px 0;
-    width: 27px;
+    width: 30px;
     height: 10px;
     transition: mask-position 0.3s linear;
   }
@@ -145,5 +172,18 @@
   &:active::after {
     mask-position: 0 0;
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    grid-column: 1/2;
+    gap: 25px;
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: -1 / 1;
+    padding: 0;
   }
 }

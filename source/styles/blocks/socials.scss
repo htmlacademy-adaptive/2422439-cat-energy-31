@@ -14,14 +14,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 28px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    padding-top: 1px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 26px;
+    padding-top: 3px;
   }
 }
 
@@ -29,7 +31,7 @@
   &::after {
     content: "";
     display: block;
-    width: 28px;
+    width: 24px;
     height: 22px;
     mask-repeat: no-repeat;
     background-color: $icon-color;
@@ -52,6 +54,10 @@
 
 .socials__link--vkontakte::after {
   mask-image: url("../../icons/stack.svg#vkontakte");
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+  }
 }
 
 .socials__link--youtube::after {

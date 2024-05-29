@@ -22,8 +22,8 @@
           </picture>
           <img class="logo__text" src="images/logo-header.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
-        <nav class="header__navigation navigation">
-          <button class="navigation__toggle navigation__toggle--closed" type="button">
+        <nav class="header__navigation navigation navigation--opened navigation--nojs">
+          <button class="navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="navigation__list navigation__list--open">
@@ -56,7 +56,7 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy PRO 500 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">500 г</dd>
@@ -86,7 +86,7 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy PRO 1000 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">1000 г</dd>
@@ -114,7 +114,7 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy PRO 500 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">500 г</dd>
@@ -144,7 +144,7 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy PRO 1000 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">1000 г</dd>
@@ -172,7 +172,7 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy SLIM 500 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">500 г</dd>
@@ -202,14 +202,14 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy SLIM 1000 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">1000 г</dd>
               </div>
               <div class="product-card__description">
                 <dt class="product-card__text">Вкус</dt>
-                <dd class="product-card__text">Курица</dd>
+                <dd class="product-card__text">Гречка</dd>
               </div>
               <div class="product-card__description">
                 <dt class="product-card__text">Цена</dt>
@@ -230,7 +230,7 @@
             <a class="product-card__link" href="#">
               <h3 class="product-card__title title-h4">Cat Energy SLIM 500 г</h3>
             </a>
-            <dl>
+            <dl class="product-card__text-wrapper">
               <div class="product-card__description">
                 <dt class="product-card__text">Масса</dt>
                 <dd class="product-card__text">500 г</dd>
@@ -249,7 +249,7 @@
           <li class="catalog__item product-card product-card--more">
             <h3 class="product-card__title product-card__title--more title-h4">Показать еще 100500 товаров</h3>
             <p class="product-card__text product-card__text--more">На самом деле вкусов гораздо больше!</p>
-            <a class="product-card__button button button--secondary" href="#">Показать все</a>
+            <a class="product-card__button button button--secondary product-card__button--more" href="#">Показать все</a>
           </li>
         </ul>
       </section>
@@ -300,8 +300,8 @@
         <div class="contacts__wrapper container">
           <div class="contacts__content">
             <h2 class="visually-hidden">Контакты</h2>
-            <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <p class="contacts__text">Приглашаем<br> к сотрудничеству дилеров!</p>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
         </div>
         <noscript>
@@ -349,5 +349,6 @@
         </a>
       </div>
     </footer>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

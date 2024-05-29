@@ -10,8 +10,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 96px;
+    padding-top: 97px;
     padding-bottom: 104px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 
@@ -24,12 +26,13 @@
   position: relative;
   width: fit-content;
   background-color: $bg-color-basic;
-  box-shadow: -30px 0 0 0 $bg-color-basic, 30px 0 0 0 $bg-color-basic;
+  box-shadow: -40px 0 0 0 $bg-color-basic, 40px 0 0 0 $bg-color-basic;
 
   @media (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 66px;
+    margin-left: 2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -48,7 +51,7 @@
   box-shadow: 100vw 0 0 $border-color-accent;
   z-index: -1;
   width: 100vw;
-  top: 50%;
+  top: 43%;
   right: 0;
 }
 
@@ -62,6 +65,10 @@
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
@@ -84,7 +91,7 @@
   color: variables.$font-color-primary;
   border: 1px solid $input-border-color;
   min-height: 56px;
-  padding-left: 13px;
+  padding-left: 12px;
 
   &::placeholder {
     color: $font-color-primary;
@@ -96,6 +103,7 @@
 
   &:focus {
     border: 2px solid $font-color-primary;
+    border-radius: unset;
   }
 
   &:invalid {
@@ -113,6 +121,8 @@
 
 .subscribe__button {
   min-height: 56px;
+  font-size: 20px;
+  line-height: 26px;
 
   @media (min-width: $tablet-width) {
     width: 256px;

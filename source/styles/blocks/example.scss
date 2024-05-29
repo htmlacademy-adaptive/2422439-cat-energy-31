@@ -11,7 +11,7 @@
 
   @media (min-width: $desktop-width) {
     background-color: $white;
-    background-image: linear-gradient(rgba(#ffffff, 0) 0 160px, $bg-secondary 160px 100%);
+    background-image: linear-gradient(rgba(#ffffff, 0) 0 136px, $bg-secondary 136px 100%);
   }
 }
 
@@ -22,16 +22,16 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px 30px;
-    padding-top: 45px;
+    padding-top: 55px;
     padding-bottom: 101px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 0;
     padding-bottom: 75px;
-    column-gap: 224px;
+    column-gap: 215px;
   }
 }
 
@@ -41,12 +41,12 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
-    margin: 0 0 60px;
+    margin: 0 0 70px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
-    margin: 0 0 146px;
+    margin: 10px 0 156px;
   }
 }
 
@@ -74,12 +74,13 @@
 
   @media (min-width: $tablet-width) {
     justify-content: start;
+    gap: 43px;
     margin: 0 0 104px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
-    margin: 0 0 55px;
+    margin: 0 0 60px;
   }
 }
 
@@ -100,12 +101,14 @@
 .example__item-value {
   @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
-  margin: 10px auto;
+  margin: 13px auto 9px;
   align-self: center;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    margin: 14px auto 7px;
   }
 }
 
@@ -145,34 +148,31 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 11px;
-    margin-bottom: 0;
+    margin: 11px 2px 0;
     max-width: 174px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-self: end;
     text-align: end;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 20px;
-    line-height: 20px;
     margin: 0;
     grid-column: 1/2;
-    display: flex;
-    gap: 63px;
+    flex-direction: row;
+    gap: 66px;
     justify-self: start;
     max-width: none;
   }
 }
 
-// picture,
-// source {
-// 	display: contents;
-// }
+.example__cost span {
+  margin-right: -2px;
+}
 
 .example__picture {
   position: relative;
-  // width: 280px;
-  // height: 256px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -181,9 +181,11 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     display: flex;
+    justify-self: end;
     grid-column: 2/3;
-    grid-row: 1/4;
+    grid-row: 1/5;
   }
 }
 
