@@ -1,3 +1,6 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .logo {
   display: flex;
   flex-wrap: wrap;
@@ -18,16 +21,6 @@
     flex-grow: 1;
   }
 }
-
-// .logo__image {
-//   @media (min-width: $tablet-width) {
-//     margin-right: 13px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin-right: 14px;
-//   }
-// }
 
 .logo__text {
   @media (min-width: $tablet-width) {

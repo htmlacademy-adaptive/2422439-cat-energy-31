@@ -1,3 +1,6 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .footer {
   text-align: center;
   background-color: $bg-secondary;

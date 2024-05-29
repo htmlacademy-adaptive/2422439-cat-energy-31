@@ -29,14 +29,14 @@
     opacity: 0.3;
   }
 
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
   @media (max-width: $mobile-width-only) {
     .navigation--closed .navigation__item {
       display: none;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 

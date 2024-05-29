@@ -4,7 +4,7 @@
 .catalog {
   @media (min-width: $tablet-width) {
     padding-top: 65px;
-    padding-bottom: 74px;
+    padding-bottom: 76px;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,12 +20,12 @@
 .catalog__title {
   margin: 0;
 
-  @media (max-width: $mobile-width-only) {
-    padding: 28px 20px 40px;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 84px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 28px 20px 40px;
   }
 }
 
@@ -38,10 +38,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
     gap: 60px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: end;
-    // justify-content: center;
   }
 
   @media (min-width: $desktop-width) {

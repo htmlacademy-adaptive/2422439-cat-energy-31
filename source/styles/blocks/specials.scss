@@ -22,7 +22,6 @@
   list-style: none;
   display: flex;
   flex-flow: wrap;
-  // flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
 
@@ -106,10 +105,13 @@
 
 .specials__item-description {
   margin: 0;
-  // align-self: center;
 
   @media (min-width: $tablet-width) {
     max-width: 245px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 2px;
   }
 }
 
