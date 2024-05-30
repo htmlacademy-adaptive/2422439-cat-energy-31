@@ -1,7 +1,7 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
-.navigation--closed .navigation__toggle {
+.navigation__toggle {
   background: none;
   border: none;
   width: 24px;
@@ -19,6 +19,7 @@
     height: 24px;
     mask-size: contain;
     margin-left: 3px;
+    margin-top: 3px;
   }
 
   &:hover::before {
@@ -45,7 +46,6 @@
   border: none;
   width: 24px;
   height: 24px;
-  margin-left: 10px;
 
   &::before {
     content: "";
@@ -57,6 +57,7 @@
     width: 18px;
     height: 18px;
     mask-size: contain;
+    margin-left: 10px;
   }
 
   &:hover::before {
@@ -73,21 +74,7 @@
 }
 
 .navigation--nojs .navigation__toggle {
-  @media (max-width: $mobile-width-only) {
-    display: none;
-  }
-}
-
-.navigation--nojs .navigation__list {
-  @media (max-width: $mobile-width-only) {
-    display: block;
-    text-align: center;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    z-index: 3;
-    background-color: $bg-color-basic;
-  }
+  display: none;
 }
 
 .navigation__list {
@@ -111,13 +98,12 @@
 
   @media (min-width: $desktop-width) {
     @include mixins.set-font($font-secondary, 400, normal, 20px, 30px);
-    // min-width: 475px;
     max-width: 600px;
     padding: 10px 2px 8px;
   }
 }
 
-.navigation__list--open {
+.navigation .navigation__list {
   @media (max-width: $mobile-width-only) {
     position: absolute;
     display: block;
@@ -130,7 +116,7 @@
   }
 }
 
-.navigation__list:not(.navigation__list--open) {
+.navigation:not(.navigation--opened) .navigation__list {
   @media (max-width: $mobile-width-only) {
     display: none;
   }
@@ -185,12 +171,8 @@
       background-color: $primary-color;
       height: 2px;
       left: 0;
-      bottom: -10px;
+      bottom: -9px;
       right: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      bottom: -8px;
     }
   }
 }

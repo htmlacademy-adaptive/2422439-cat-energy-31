@@ -9,12 +9,12 @@
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/180.png"><!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="./fonts/oswald-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/lato-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header" data-test="header">
       <div class="header__wrapper container">
         <a class="header__logo logo" href="index.html">
           <picture>
@@ -28,7 +28,7 @@
           <button class="navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <ul class="navigation__list navigation__list--open">
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--current" href="#">Главная</a>
             </li>
@@ -43,7 +43,7 @@
       </div>
     </header>
     <main class="main-container">
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <div class="container">
           <div class="hero__wrapper">
             <h1 class="hero__title title-h1">Функциональное<br> питание для котов</h1>
@@ -60,7 +60,7 @@
           </div>
         </div>
       </section>
-      <section class="programs container">
+      <section class="programs container" data-test="programs">
         <h2 class="visually-hidden">Наши предложения</h2>
         <div class="programs__card programs__card--slim">
           <h3 class="programs__card-title title-h2">Похудение</h3>
@@ -73,7 +73,7 @@
           <a class="programs__card-link" href="catalog.html">Каталог pro</a>
         </div>
       </section>
-      <section class="specials">
+      <section class="specials" data-test="features">
         <div class="specials__wrapper container">
           <h2 class="specials__title title-h1">Как это работает</h2>
           <ul class="specials__list">
@@ -92,7 +92,7 @@
           </ul>
         </div>
       </section>
-      <section class="example">
+      <section class="example" data-test="proof">
         <div class="example__wrapper container">
           <div class="example__content">
             <h2 class="example__title title-h1">Живой пример</h2>
@@ -126,7 +126,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" data-test="contacts">
         <div class="contacts__wrapper container">
           <div class="contacts__content">
             <h2 class="visually-hidden">Контакты</h2>
@@ -145,11 +145,11 @@
           </picture>
         </noscript>
         <div class="contacts__map-iframe">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sus!4v1716360650734!5m2!1sru!2sus" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sus!4v1716360650734!5m2!1sru!2sus" width="320" height="362" style="border:0;" allowfullscreen="" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="footer__wrapper container">
         <a class="footer__logo" href="index.html">
           <img src="images/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
@@ -179,6 +179,5 @@
           </a>
       </div>
     </footer>
-    <script src="scripts/script.js"></script>
   </body>
 </html>
