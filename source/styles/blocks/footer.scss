@@ -1,0 +1,44 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.footer {
+  text-align: center;
+  background-color: $bg-secondary;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 67px;
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-color-special;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    padding: 0;
+    border: none;
+  }
+}

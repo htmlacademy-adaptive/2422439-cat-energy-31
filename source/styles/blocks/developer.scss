@@ -1,0 +1,44 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.developer {
+  text-decoration: none;
+}
+
+.developer__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: variables.$font-color-primary;
+
+  &::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#developer-logo");
+    mask-repeat: no-repeat;
+    background-color: $icon-color;
+    mask-position: center;
+    width: 27px;
+    height: 34px;
+  }
+
+  &:hover::after {
+    background-color: $primary-color;
+  }
+
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
+
+  &:active::after {
+    background-color: rgba($primary-color, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+    justify-content: end;
+    padding: 0;
+  }
+}

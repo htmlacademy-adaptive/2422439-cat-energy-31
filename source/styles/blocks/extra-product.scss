@@ -1,0 +1,106 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.extra-product {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 50% 35% 15%;
+    padding: 26px 37px 28px;
+    border-top: 1px solid $border-color-primary;
+    border-left: 1px solid $border-color-primary;
+    border-right: 1px solid $border-color-primary;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: minmax(325px, 1fr) 1fr 1fr 1fr;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 16px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    padding: 14px 0 18px;
+    border-top: 1px solid $border-color-primary;
+  }
+}
+
+.extra-product:last-child {
+  border-bottom: 1px solid $border-color-primary;
+}
+
+.extra-product__title {
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 0 13px;
+    line-height: 16px;
+    grid-column: 1/-1;
+  }
+}
+
+.extra-product__text {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    margin-top: 3px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 0 14px;
+    text-align: left;
+  }
+}
+
+.extra-product__price {
+  @media (min-width: $tablet-width) {
+    margin: 1px 3px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    vertical-align: middle;
+    margin: 0;
+    text-align: end;
+    margin-right: 40px;
+    margin-top: 4px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 0 14px;
+    text-align: end;
+  }
+}
+
+.extra-product__button {
+  grid-column: 1/-1;
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+    min-width: 244px;
+  }
+}

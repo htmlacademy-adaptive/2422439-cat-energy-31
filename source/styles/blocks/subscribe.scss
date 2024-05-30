@@ -1,0 +1,127 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.subscribe {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 97px 28px 104px;
+  }
+}
+
+.subscribe__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
+  color: variables.$black;
+  position: relative;
+  width: fit-content;
+  background-color: $bg-color-basic;
+  box-shadow: -40px 0 0 0 $bg-color-basic, 40px 0 0 0 $bg-color-basic;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 66px;
+    margin-left: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 72px;
+  }
+}
+
+.subscribe__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: $border-color-accent;
+  box-shadow: 100vw 0 0 $border-color-accent;
+  z-index: -1;
+  width: 100vw;
+  top: 43%;
+  right: 0;
+}
+
+.subscribe__text {
+  @include mixins.set-font($font-secondary, 400, normal, 16px, 24px);
+  color: variables.$black;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.form__input {
+  @include mixins.set-font($font-secondary, 400, normal, 20px, 30px);
+  text-transform: uppercase;
+  color: variables.$font-color-primary;
+  border: 1px solid $input-border-color;
+  min-height: 56px;
+  padding-left: 12px;
+
+  &::placeholder {
+    color: $font-color-primary;
+  }
+
+  &:hover {
+    border: 1px solid $border-color-primary;
+  }
+
+  &:focus {
+    border: 2px solid $font-color-primary;
+    border-radius: unset;
+  }
+
+  &:invalid {
+    border: 2px solid $error-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 376px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 496px;
+  }
+}
+
+.subscribe__button {
+  min-height: 56px;
+  font-size: 20px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    width: 256px;
+  }
+}

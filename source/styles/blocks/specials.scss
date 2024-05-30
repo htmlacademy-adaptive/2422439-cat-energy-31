@@ -1,0 +1,152 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.specials {
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding: 46px 0;
+    border-bottom: 1px solid $border-color-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    border-bottom: none;
+  }
+}
+
+.specials__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 59px;
+    counter-reset: specials 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.specials__title {
+  line-height: 40px;
+  margin: 20px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 9px 0 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 10px 0 42px;
+  }
+}
+
+.specials__item {
+  position: relative;
+  counter-increment: specials 1;
+  display: flex;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 40px 0;
+    min-height: 280px;
+    margin-right: 76px;
+    max-width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -3px;
+  }
+}
+
+.specials__item::before {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $primary-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
+}
+
+.specials__item::after {
+  @media (min-width: $tablet-width) {
+    @include mixins.set-font($font-secondary, 400, normal, 280px, 280px);
+    content: counter(specials);
+    position: absolute;
+    color: $bg-secondary;
+    top: 0;
+    right: 0;
+    width: 134px;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+  }
+}
+
+.specials__item-description {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 245px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 2px;
+  }
+}
+
+.specials__item--healthy::before {
+  background-image: url("../../icons/stack.svg#leaf-icon");
+  background-size: 30px 28px;
+}
+
+.specials__item--easy::before {
+  background-image: url("../../icons/stack.svg#glass-icon");
+  background-size: 27px 29px;
+}
+
+.specials__item--replace::before {
+  background-image: url("../../icons/stack.svg#eat-icon");
+  background-size: 26px 30px;
+}
+
+.specials__item--result::before {
+  background-image: url("../../icons/stack.svg#clock-icon");
+  background-size: 27px 31px;
+}
+
+.specials__item--healthy {
+  @media (min-width: $tablet-width) {
+    margin-right: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 7px;
+  }
+}
+
+.specials__item-description br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
