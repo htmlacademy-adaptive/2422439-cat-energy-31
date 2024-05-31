@@ -18,25 +18,25 @@
     content: "";
     mask-image: url("../../icons/stack.svg#developer-logo");
     mask-repeat: no-repeat;
-    background-color: $icon-color;
+    background-color: variables.$icon-color;
     mask-position: center;
     width: 27px;
     height: 34px;
   }
 
   &:hover::after {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
   }
 
   &:active {
-    color: rgba($font-color-primary, 0.3);
+    color: rgba(variables.$font-color-primary, 0.3);
   }
 
   &:active::after {
-    background-color: rgba($primary-color, 0.3);
+    background-color: rgba(variables.$primary-color, 0.3);
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     gap: 23px;
     justify-content: end;
     padding: 0;

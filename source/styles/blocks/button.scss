@@ -2,7 +2,7 @@
 @use "../common/variables.scss";
 
 .button {
-  @include mixins.set-font($font-secondary, 400, normal, 16px, 20px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 16px, 20px);
   padding: 10px 15px;
   display: block;
   text-align: center;
@@ -17,11 +17,15 @@
   background-color: variables.$primary-color;
 
   &:hover {
-    background-color: $bg-primary-special;
+    background-color: variables.$bg-primary-special;
   }
 
   &:active {
-    color: rgba($white, 0.3);
+    color: rgba(variables.$white, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 }
 
@@ -30,10 +34,16 @@
   background-color: variables.$bg-secondary;
 
   &:hover {
-    background-color: $bg-secondary-special;
+    background-color: variables.$bg-secondary-special;
   }
 
   &:active {
-    background-color: $bg-secondary-special;
+    background-color: variables.$bg-secondary-special;
   }
+
+  // &:disabled {
+  //   opacity: 0.8;
+  //   background-color: variables.$icon-color;
+  //   color: black;
+  // }
 }

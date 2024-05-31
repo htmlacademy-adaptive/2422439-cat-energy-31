@@ -5,9 +5,9 @@
   display: block;
   min-width: 280px;
   padding: 58px 0 43px;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     background-image:
       linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       image-set("../../images/bg-catalog-cat-mobile@1x.webp" type("image/webp") 1x,
@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     background-image:
       linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       image-set("../../images/bg-catalog-cat-tablet@1x.webp" type("image/webp") 1x,
@@ -36,7 +36,7 @@
     padding: 59px 125px 60px 79px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     min-width: 245px;
     background-image:
       linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
@@ -48,7 +48,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    padding: 56px 0 43px;
+    padding: 56px 35px 43px;
     flex-direction: column;
     justify-content: center;
   }
@@ -58,14 +58,14 @@
     content: "";
     mask-image: url("../../icons/stack.svg#gift-icon");
     mask-repeat: no-repeat;
-    background-color: $white;
+    background-color: variables.$white;
     mask-position: center;
     min-width: 78px;
     min-height: 81px;
     left: 0;
     top: 0;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: variables.$desktop-width) {
       margin-bottom: 48px;
     }
   }
@@ -79,13 +79,13 @@
   color: variables.$white;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     text-align: left;
     padding: 0;
     align-self: center;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     text-align: center;
   }
 }

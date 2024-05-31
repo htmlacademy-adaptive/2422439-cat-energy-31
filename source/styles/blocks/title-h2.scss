@@ -2,12 +2,12 @@
 @use "../common/variables.scss";
 
 .title-h2 {
-  @include mixins.set-font($font-secondary, 400, normal, 24px, 37px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 24px, 37px);
   color: variables.$black;
   margin: 0;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 36px;
     line-height: 36px;
   }

@@ -2,35 +2,35 @@
 @use "../common/variables.scss";
 
 .extra-catalog {
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     padding-top: 25px;
   }
 }
 
 
 .extra-catalog__title {
-  @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 24px, 24px);
   margin: 0;
   margin-bottom: 34px;
   color: variables.$black;
   position: relative;
   width: fit-content;
-  background-color: $bg-color-basic;
-  box-shadow: -40px 0 0 0 $bg-color-basic, 40px 0 0 0 $bg-color-basic;
+  background-color: variables.$bg-color-basic;
+  box-shadow: -40px 0 0 0 variables.$bg-color-basic, 40px 0 0 0 variables.$bg-color-basic;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     margin: 0 0 78px 40px;
     font-size: 32px;
     line-height: 32px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     margin: 0;
     margin-bottom: 78px;
     font-size: 40px;
@@ -44,8 +44,8 @@
   display: block;
   position: absolute;
   height: 2px;
-  background: $border-color-accent;
-  box-shadow: 100vw 0 0 $border-color-accent;
+  background: variables.$border-color-accent;
+  box-shadow: 100vw 0 0 variables.$border-color-accent;
   z-index: -1;
   width: 100vw;
   top: 43%;
@@ -57,19 +57,19 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     margin: 0 0 69px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     grid-column: 1/4;
     margin: 0;
   }
 }
 
 .extra-catalog__item {
-  @media (min-width: $desktop-width) {
-    border-top: 1px solid $border-color-primary;
+  @media (min-width: variables.$desktop-width) {
+    border-top: 1px solid variables.$border-color-primary;
     padding: 15px 0 17px;
   }
 }

@@ -13,13 +13,13 @@
     display: block;
     mask-image: url("../../icons/stack.svg#burger-icon");
     mask-repeat: no-repeat;
-    background-color: $black;
+    background-color: variables.$black;
     mask-position: center;
     width: 24px;
     height: 24px;
     mask-size: contain;
     margin-left: 3px;
-    margin-top: 3px;
+    margin-bottom: 11px;
   }
 
   &:hover::before {
@@ -30,14 +30,8 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     display: none;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    .navigation--closed .navigation__item {
-      display: none;
-    }
   }
 }
 
@@ -52,7 +46,7 @@
     display: block;
     mask-image: url("../../icons/stack.svg#close-icon");
     mask-repeat: no-repeat;
-    background-color: $black;
+    background-color: variables.$black;
     mask-position: center;
     width: 18px;
     height: 18px;
@@ -68,7 +62,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     display: none;
   }
 }
@@ -81,30 +75,30 @@
   margin: 0;
   padding: 0;
 
-  @include mixins.set-font($font-secondary, 400, normal, 20px, 20px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 20px, 20px);
   list-style: none;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    @include mixins.set-font($font-secondary, 400, normal, 18px, 24px);
+    @include mixins.set-font(variables.$font-secondary, 400, normal, 18px, 24px);
     display: flex;
     flex-flow: wrap;
     flex-direction: row;
     justify-content: end;
     gap: 33px;
-    min-width: 440px;
+    max-width: 60vw;
     padding: 10px 6px 8px;
   }
 
-  @media (min-width: $desktop-width) {
-    @include mixins.set-font($font-secondary, 400, normal, 20px, 30px);
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(variables.$font-secondary, 400, normal, 20px, 30px);
     max-width: 600px;
     padding: 10px 2px 8px;
   }
 }
 
 .navigation .navigation__list {
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     position: absolute;
     display: block;
     text-align: center;
@@ -112,12 +106,26 @@
     left: 0;
     width: 100vw;
     z-index: 3;
-    background-color: $bg-color-basic;
+    background-color: variables.$bg-color-basic;
+  }
+}
+
+// Стили для навигации nojs
+
+.header--nojs {
+  min-height: auto;
+  padding-top: 13px;
+}
+
+.header--nojs .navigation__list {
+  @media (max-width: variables.$mobile-width-only) {
+    position: static;
+    margin: 0 -20px;
   }
 }
 
 .navigation:not(.navigation--opened) .navigation__list {
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     display: none;
   }
 }
@@ -137,38 +145,38 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $desktop-width) {
-    color: $white;
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$white;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     padding: 24px 0 21px;
   }
 }
 
 .navigation__item {
-  @media (max-width: $mobile-width-only) {
-    border-top: 1px solid $border-color-secondary;
+  @media (max-width: variables.$mobile-width-only) {
+    border-top: 1px solid variables.$border-color-secondary;
 
     &:last-child {
-      border-bottom: 2px solid $border-color-secondary;
+      border-bottom: 2px solid variables.$border-color-secondary;
     }
   }
 }
 
 .navigation__link--color {
-  @media (min-width: $tablet-width) {
-    color: $black;
+  @media (min-width: variables.$tablet-width) {
+    color: variables.$black;
   }
 }
 
 .navigation__link--current,
 .navigation__link--current-accent {
   &::after {
-    @media (min-width: $tablet-width) {
+    @media (min-width: variables.$tablet-width) {
       position: absolute;
       content: "";
-      background-color: $primary-color;
+      background-color: variables.$primary-color;
       height: 2px;
       left: 0;
       bottom: -9px;
@@ -178,7 +186,7 @@
 }
 
 .navigation__link--current::after {
-  @media (min-width: $desktop-width) {
-    background-color: $bg-color-basic;
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg-color-basic;
   }
 }

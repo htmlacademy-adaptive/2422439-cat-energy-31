@@ -2,12 +2,34 @@
 @use "../common/variables.scss";
 
 .header {
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
     display: flex;
     align-items: center;
-    min-height: 65px;
-    border-bottom: 1px solid $border-color-secondary;
+    padding-top: 13px;
+    border-bottom: 1px solid variables.$border-color-secondary;
     position: relative;
+  }
+}
+
+.header--style {
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image:
+        linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        linear-gradient(to left, #3f3e46, #404145);
+      background-size: auto;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      z-index: -1;
+    }
   }
 }
 
@@ -17,11 +39,11 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     padding-top: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     padding-top: 55px;
   }
 }
