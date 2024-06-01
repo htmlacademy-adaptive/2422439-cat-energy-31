@@ -28,7 +28,7 @@
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 59px;
+    gap: 37px 60px;
     counter-reset: specials 0;
   }
 
@@ -62,8 +62,7 @@
     display: block;
     padding: 40px 0;
     min-height: 280px;
-    margin-right: 76px;
-    max-width: 250px;
+    max-width: 248px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -137,11 +136,7 @@
 
 .specials__item--healthy {
   @media (min-width: variables.$tablet-width) {
-    margin-right: 86px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    margin-right: 7px;
+    max-width: 238px;
   }
 }
 

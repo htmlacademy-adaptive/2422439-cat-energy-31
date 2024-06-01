@@ -110,17 +110,10 @@
   }
 }
 
-// Стили для навигации nojs
-
-.header--nojs {
-  min-height: auto;
-  padding-top: 13px;
-}
-
 .header--nojs .navigation__list {
   @media (max-width: variables.$mobile-width-only) {
     position: static;
-    margin: 0 -20px;
+    width: initial;
   }
 }
 
@@ -159,7 +152,7 @@
     border-top: 1px solid variables.$border-color-secondary;
 
     &:last-child {
-      border-bottom: 2px solid variables.$border-color-secondary;
+      border-bottom: 1px solid variables.$border-color-secondary;
     }
   }
 }

@@ -86,24 +86,20 @@
   @include mixins.set-font(variables.$font-secondary, 400, normal, 20px, 30px);
   text-transform: uppercase;
   color: variables.$font-color-primary;
+  border-radius: 0;
   border: 1px solid variables.$input-border-color;
   min-height: 56px;
-  padding-left: 12px;
+  padding: 12px;
 
   &:hover {
     border: 1px solid variables.$border-color-primary;
   }
 
   &:focus {
-    border: 2px solid variables.$font-color-primary;
-    // border: 2px solid red;
-    border-radius: unset;
+    border-color: variables.$font-color-primary;
+    outline: 2px solid variables.$font-color-primary;
+    outline-offset: -2px;
   }
-
-  // &:focus-visible {
-  //   border: 2px solid variables.$font-color-primary;
-  //   border-radius: 0px;
-  // }
 
   &:invalid {
     border: 2px solid variables.$error-color;
@@ -116,22 +112,6 @@
   @media (min-width: variables.$desktop-width) {
     min-width: 496px;
   }
-}
-
-.form__input::placeholder {
-  color: variables.$font-color-primary;
-}
-
-// .form__input:focus-within {
-//   // border: 2px solid variables.$font-color-primary;
-//   border: 2px solid #68b738;
-//   border-radius: unset;
-// }
-
-.form__input:focus-visible {
-  // outline: 1px solid variables.$font-color-primary;
-  border-radius: initial;
-  border: unset;
 }
 
 .subscribe__button {

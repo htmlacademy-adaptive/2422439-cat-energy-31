@@ -10,6 +10,10 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+  }
 }
 
 .button--primary {
@@ -40,10 +44,4 @@
   &:active {
     background-color: variables.$bg-secondary-special;
   }
-
-  // &:disabled {
-  //   opacity: 0.8;
-  //   background-color: variables.$icon-color;
-  //   color: black;
-  // }
 }

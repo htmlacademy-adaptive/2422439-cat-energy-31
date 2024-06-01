@@ -7,7 +7,7 @@ header.classList.remove('header--nojs');
 navMain.classList.remove('navigation--nojs');
 navMain.classList.remove('navigation--opened');
 
-const interactiveMap = document.querySelector('.contacts__map-iframe');
-interactiveMap.classList.remove('contacts__map-iframe--nojs');
+const interactiveMap = document.querySelector('.contacts__map');
+interactiveMap.classList.remove('contacts__map--nojs');
 
 navToggle.addEventListener('click', () => navMain.classList.toggle('navigation--opened'));

@@ -39,3 +39,9 @@
     margin: 0 auto;
   }
 }
+
+.header--nojs .logo {
+  @media (max-width: variables.$mobile-width-only) {
+    max-width: calc(100% - 33px);
+  }
+}
