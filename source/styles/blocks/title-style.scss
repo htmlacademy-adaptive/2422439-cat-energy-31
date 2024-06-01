@@ -1,0 +1,14 @@
+@use "../common/variables.scss";
+
+.title-style::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: variables.$border-color-accent;
+  box-shadow: 100vw 0 0 variables.$border-color-accent;
+  z-index: -1;
+  width: 100vw;
+  top: 43%;
+  right: 0;
+}

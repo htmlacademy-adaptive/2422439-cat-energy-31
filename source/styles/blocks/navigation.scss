@@ -18,8 +18,7 @@
     width: 24px;
     height: 24px;
     mask-size: contain;
-    margin-left: 3px;
-    margin-bottom: 11px;
+    margin: 0 0 11px 3px;
   }
 
   &:hover::before {
@@ -79,7 +78,7 @@
   list-style: none;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(variables.$font-secondary, 400, normal, 18px, 24px);
     display: flex;
     flex-flow: wrap;

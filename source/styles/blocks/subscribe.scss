@@ -15,8 +15,7 @@
 }
 
 .subscribe__title {
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 0 32px;
 
   @include mixins.set-font(variables.$font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
@@ -28,8 +27,7 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 66px;
-    margin-left: 2px;
+    margin: 0 0 66px 2px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -39,25 +37,11 @@
   }
 }
 
-.subscribe__title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  background: variables.$border-color-accent;
-  box-shadow: 100vw 0 0 variables.$border-color-accent;
-  z-index: -1;
-  width: 100vw;
-  top: 43%;
-  right: 0;
-}
-
 .subscribe__text {
   @include mixins.set-font(variables.$font-secondary, 400, normal, 16px, 24px);
   color: variables.$black;
   text-align: center;
-  margin: 0;
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 24px;
@@ -89,7 +73,7 @@
   border-radius: 0;
   border: 1px solid variables.$input-border-color;
   min-height: 56px;
-  padding: 12px;
+  padding: 10px 12px;
 
   &:hover {
     border: 1px solid variables.$border-color-primary;

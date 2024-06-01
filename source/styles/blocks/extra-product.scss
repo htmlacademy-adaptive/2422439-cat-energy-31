@@ -20,7 +20,7 @@
     padding: 15px 0 16px;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content 1fr min-content;
     padding: 14px 0 18px;
@@ -35,8 +35,7 @@
 .extra-product__title {
   @media (min-width: variables.$tablet-width) {
     line-height: 20px;
-    margin: 0;
-    margin-bottom: 24px;
+    margin: 0 0 24px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -52,8 +51,7 @@
 
 .extra-product__text {
   @media (min-width: variables.$tablet-width) {
-    margin: 0;
-    margin-top: 2px;
+    margin: 2px 0 0;
     font-size: 16px;
     line-height: 20px;
     text-align: end;
@@ -82,10 +80,8 @@
 
   @media (min-width: variables.$desktop-width) {
     vertical-align: middle;
-    margin: 0;
+    margin: 4px 40px 0 0;
     text-align: end;
-    margin-right: 40px;
-    margin-top: 4px;
   }
 
   @media (max-width: variables.$mobile-width-only) {
