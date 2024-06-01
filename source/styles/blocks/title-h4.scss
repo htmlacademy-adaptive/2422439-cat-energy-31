@@ -6,7 +6,7 @@
   color: variables.$font-color-secondary;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 24px;
   }

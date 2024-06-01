@@ -2,16 +2,16 @@
 @use "../common/variables.scss";
 
 .example {
-  background-color: $bg-color-accent;
+  background-color: variables.$bg-color-accent;
 
-  @media (min-width: $tablet-width) {
-    background-color: $white;
-    background-image: linear-gradient(rgba(#ffffff, 0) 0 619px, $bg-color-accent 619px 100%);
+  @media (min-width: variables.$tablet-width) {
+    background-color: variables.$white;
+    background-image: linear-gradient(rgba(#ffffff, 0) 0 619px, variables.$bg-color-accent 619px 100%);
   }
 
-  @media (min-width: $desktop-width) {
-    background-color: $white;
-    background-image: linear-gradient(rgba(#ffffff, 0) 0 136px, $bg-secondary 136px 100%);
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$white;
+    background-image: linear-gradient(rgba(#ffffff, 0) 0 136px, variables.$bg-secondary 136px 100%);
   }
 }
 
@@ -19,14 +19,14 @@
   padding-top: 25px;
   padding-bottom: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding-top: 55px;
+    padding-top: 45px;
     padding-bottom: 101px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     grid-template-columns: 50% 50%;
     padding-top: 0;
     padding-bottom: 75px;
@@ -37,13 +37,13 @@
   margin: 0 0 40px;
   line-height: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     line-height: 60px;
     grid-column: 1/-1;
-    margin: 0 0 70px;
+    margin: 0 0 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     grid-column: 1/2;
     margin: 0 0 147px;
   }
@@ -52,12 +52,12 @@
 .example__text {
   margin: 0 0 20px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
     margin: 0 0 55px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     grid-column: 1/2;
     margin: 0 0 69px;
     max-width: 433px;
@@ -73,13 +73,13 @@
   gap: 32px;
   justify-content: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     justify-content: start;
     gap: 43px;
     margin: 0 0 104px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     grid-column: 1/2;
     margin: 0 0 60px;
     max-width: 575px;
@@ -91,23 +91,23 @@
   flex-direction: column;
   width: 124px;
   height: 56px;
-  border: 1px solid $border-color-primary;
+  border: 1px solid variables.$border-color-primary;
   border-radius: 1px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     width: 162px;
     height: 72px;
   }
 }
 
 .example__item-value {
-  @include mixins.set-font($font-secondary, 400, normal, 24px, 24px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
   margin: 13px auto 9px;
   align-self: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 30px;
     line-height: 37px;
     margin: 14px auto 7px;
@@ -120,34 +120,34 @@
   margin: 0;
   text-align: center;
   align-self: center;
-  background-color: $bg-color-accent;
+  background-color: variables.$bg-color-accent;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    background-color: $bg-color-basic;
+    background-color: variables.$bg-color-basic;
     padding: 0 5px;
     margin-top: 5px;
   }
 
-  @media (min-width: $desktop-width) {
-    background-color: $bg-secondary;
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg-secondary;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     width: 77px;
     height: 24px;
   }
 }
 
 .example__cost {
-  @include mixins.set-font($font-secondary, 400, normal, 14px, 20px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 14px, 20px);
   color: variables.$black;
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 20px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 20px;
     margin: 11px 2px 0;
@@ -159,9 +159,8 @@
     text-align: end;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     margin: 0;
-    grid-column: 1/2;
     flex-direction: row;
     gap: 66px;
     justify-self: start;
@@ -171,18 +170,19 @@
 
 .example__cost span {
   margin-right: -2px;
+  min-width: 90px;
 }
 
 .example__picture {
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     display: flex;
     grid-column: 1/-1;
     margin: 0 auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     margin: 0;
     justify-self: end;
     grid-column: 2/3;
@@ -200,7 +200,7 @@
   cursor: pointer;
   border: none;
   padding: 0;
-  background-color: $icon-color;
+  background-color: variables.$icon-color;
   width: 4px;
   height: 100%;
   border-radius: 2px;
@@ -209,11 +209,11 @@
   transform: translate(-50%, -50%);
 
   &:hover {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
   }
 
   &:active {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     opacity: 0.6;
   }
 
@@ -223,25 +223,25 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: $white;
-    border: 2px solid $icon-color;
+    background-color: variables.$white;
+    border: 2px solid variables.$icon-color;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   &:hover::before {
-    border-color: $primary-color;
+    border-color: variables.$primary-color;
   }
 
   &:active::before {
-    border-color: rgba($primary-color, 0.6);
+    border-color: rgba(variables.$primary-color, 0.6);
   }
 
   &::after {
     content: "";
     position: absolute;
-    background-color: $icon-color;
+    background-color: variables.$icon-color;
     width: 24px;
     height: 18px;
     mask-image: url("../../icons/stack.svg#slider-icon");
@@ -254,11 +254,11 @@
   }
 
   &:hover::after {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
   }
 
   &:active::after {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     opacity: 0.6;
   }
 }

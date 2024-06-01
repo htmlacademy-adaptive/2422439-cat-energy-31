@@ -2,17 +2,17 @@
 @use "../common/variables.scss";
 
 .catalog {
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     padding-top: 65px;
     padding-bottom: 76px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     padding-top: 74px;
     padding-bottom: 72px;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: variables.$mobile-width-only) {
     padding: 0;
   }
 }
@@ -20,12 +20,12 @@
 .catalog__title {
   margin: 0;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     margin-bottom: 84px;
   }
 
-  @media (max-width: $mobile-width-only) {
-    padding: 28px 20px 40px;
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 27px 20px 40px;
   }
 }
 
@@ -34,13 +34,13 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
     gap: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: variables.$desktop-width) {
     gap: 63px 80px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
