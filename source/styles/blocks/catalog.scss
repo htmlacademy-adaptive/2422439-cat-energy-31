@@ -4,7 +4,7 @@
 .catalog {
   @media (min-width: variables.$tablet-width) {
     padding-top: 65px;
-    padding-bottom: 76px;
+    padding-bottom: 75px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -25,7 +25,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    padding: 27px 20px 40px;
+    padding: 28px 20px 40px;
   }
 }
 
