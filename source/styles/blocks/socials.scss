@@ -40,9 +40,6 @@
     background-color: variables.$icon-color;
     mask-position: center;
     mask-size: contain;
-    left: 0;
-    right: 0;
-    top: 0;
   }
 
   &:hover::after {
