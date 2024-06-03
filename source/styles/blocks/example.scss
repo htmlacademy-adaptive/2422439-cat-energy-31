@@ -54,7 +54,7 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
-    margin: 0 0 55px;
+    margin: 0 0 56px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -65,7 +65,7 @@
 }
 
 .example__list {
-  margin: 0 0 34px;
+  margin: 0 0 20px;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -76,12 +76,12 @@
   @media (min-width: variables.$tablet-width) {
     justify-content: start;
     gap: 43px;
-    margin: 0 0 104px;
+    margin: 0 0 99px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-column: 1/2;
-    margin: 0 0 60px;
+    margin: 0 0 56px;
     max-width: 575px;
   }
 }
@@ -89,37 +89,40 @@
 .example__item {
   display: flex;
   flex-direction: column;
-  width: 124px;
-  height: 56px;
-  border: 1px solid variables.$border-color-primary;
-  border-radius: 1px;
 
   @media (min-width: variables.$tablet-width) {
     width: 162px;
-    height: 72px;
+    min-height: 72px;
   }
 }
 
 .example__item-value {
   @include mixins.set-font(variables.$font-secondary, 400, normal, 24px, 24px);
   color: variables.$black;
-  margin: 13px auto 9px;
+  border: 1px solid variables.$border-color-primary;
+  border-radius: 4px;
+  padding: 13px 20px 18px;
+  min-width: 124px;
+  text-align: center;
+  margin: 0;
   align-self: center;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    margin: 14px auto 7px;
+    min-width: 162px;
+    padding: 14px 20px 19px;
   }
 }
 
 .example__item-text {
   font-size: 12px;
   line-height: 12px;
-  margin: 0;
+  margin: -10px auto 0;
   text-align: center;
   align-self: center;
+  width: 81px;
   background-color: variables.$bg-color-accent;
 
   @media (min-width: variables.$tablet-width) {
@@ -127,16 +130,11 @@
     line-height: 14px;
     background-color: variables.$bg-color-basic;
     padding: 0 5px;
-    margin-top: 4px;
+    width: 90%;
   }
 
   @media (min-width: variables.$desktop-width) {
     background-color: variables.$bg-secondary;
-  }
-
-  @media (max-width: variables.$mobile-width-only) {
-    width: 77px;
-    height: 24px;
   }
 }
 
@@ -188,6 +186,10 @@
     grid-column: 2/3;
     grid-row: 1/5;
   }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin: 0 auto;
+  }
 }
 
 .example__picture-image {
@@ -213,7 +215,7 @@
   }
 
   &:active {
-    background-color: variables.$primary-color;
+    background-color: variables.$bg-primary-special;
     opacity: 0.6;
   }
 
@@ -235,7 +237,7 @@
   }
 
   &:active::before {
-    border-color: rgba(variables.$primary-color, 0.6);
+    border-color: rgba(variables.$bg-primary-special, 0.6);
   }
 
   &::after {
@@ -258,7 +260,7 @@
   }
 
   &:active::after {
-    background-color: variables.$primary-color;
+    background-color: variables.$bg-primary-special;
     opacity: 0.6;
   }
 }

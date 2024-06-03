@@ -3,6 +3,14 @@
 
 .developer {
   text-decoration: none;
+
+  &:focus .developer__text::after {
+    background-color: variables.$primary-color;
+  }
+
+  &:active .developer__text::after {
+    background-color: rgba(variables.$primary-color, 0.3);
+  }
 }
 
 .developer__text {
@@ -30,10 +38,6 @@
 
   &:active {
     color: rgba(variables.$font-color-primary, 0.3);
-  }
-
-  &:active::after {
-    background-color: rgba(variables.$primary-color, 0.3);
   }
 
   @media (min-width: variables.$tablet-width) {

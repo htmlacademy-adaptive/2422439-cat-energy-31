@@ -92,7 +92,7 @@
     @include mixins.set-font(variables.$font-secondary, 400, normal, 280px, 280px);
     content: counter(specials);
     position: absolute;
-    color: $bg-secondary;
+    color: variables.$bg-secondary;
     top: 0;
     right: 0;
     width: 134px;

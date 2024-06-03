@@ -2,7 +2,7 @@
 @use "../common/variables.scss";
 
 .title-h4 {
-  @include mixins.set-font($font-secondary, 400, normal, 16px, 20px);
+  @include mixins.set-font(variables.$font-secondary, 400, normal, 16px, 20px);
   color: variables.$font-color-secondary;
   text-transform: uppercase;
 

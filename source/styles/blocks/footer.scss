@@ -4,7 +4,7 @@
 .footer {
   text-align: center;
   background-color: variables.$bg-secondary;
-  padding: 20px 0;
+  padding: 19px 0;
 
   @media (min-width: variables.$tablet-width) {
     padding: 56px 0;
@@ -41,4 +41,9 @@
     padding: 0;
     border: none;
   }
+}
+
+.footer__logo-image {
+  width: 128px;
+  align-self: center;
 }

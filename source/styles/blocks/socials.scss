@@ -46,6 +46,10 @@
     background-color: variables.$primary-color;
   }
 
+  &:focus::after {
+    background-color: variables.$primary-color;
+  }
+
   &:active::after {
     background-color: variables.$primary-color;
     opacity: 0.3;
