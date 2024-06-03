@@ -23,6 +23,10 @@
   }
 }
 
+.logo picture {
+  display: contents;
+}
+
 .logo__text {
   @media (min-width: variables.$tablet-width) {
     min-width: 101px;

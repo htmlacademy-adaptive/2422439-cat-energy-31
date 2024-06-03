@@ -154,14 +154,14 @@
     mask-image: url("../../icons/stack.svg#arrow-icon");
     mask-repeat: no-repeat;
     background-color: variables.$black;
-    mask-position: -5px 0;
-    width: 32px;
+    mask-position: -8px;
+    min-width: 32px;
     height: 10px;
     transition: mask-position 0.3s linear;
   }
 
   &:hover::after {
-    mask-position: 0 0;
+    mask-position: 0;
   }
 
   &:active {
@@ -169,7 +169,7 @@
   }
 
   &:active::after {
-    mask-position: 0 0;
+    mask-position: 0;
     opacity: 0.3;
   }
 

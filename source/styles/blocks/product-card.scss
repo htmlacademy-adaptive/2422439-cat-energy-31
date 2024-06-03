@@ -64,6 +64,14 @@
   @media (max-width: variables.$mobile-width-only) {
     max-width: 85px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product-card__title {
@@ -161,6 +169,14 @@
   @media (min-width: variables.$desktop-width) {
     padding: 5px 0 7px;
   }
+}
+
+// .product-card__image {
+//   display: block;
+// }
+
+.product-card__picture picture {
+  display: contents;
 }
 
 .product-card__picture {

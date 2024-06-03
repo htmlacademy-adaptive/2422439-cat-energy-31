@@ -188,6 +188,10 @@
     grid-column: 2/3;
     grid-row: 1/5;
   }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin: 0 auto;
+  }
 }
 
 .example__picture-image {
@@ -213,7 +217,7 @@
   }
 
   &:active {
-    background-color: variables.$primary-color;
+    background-color: variables.$bg-primary-special;
     opacity: 0.6;
   }
 
@@ -235,7 +239,7 @@
   }
 
   &:active::before {
-    border-color: rgba(variables.$primary-color, 0.6);
+    border-color: rgba(variables.$bg-primary-special, 0.6);
   }
 
   &::after {
@@ -258,7 +262,7 @@
   }
 
   &:active::after {
-    background-color: variables.$primary-color;
+    background-color: variables.$bg-primary-special;
     opacity: 0.6;
   }
 }
