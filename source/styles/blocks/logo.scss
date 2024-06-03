@@ -28,14 +28,14 @@
 }
 
 .logo__text {
+  width: 101px;
+
   @media (min-width: variables.$tablet-width) {
-    min-width: 101px;
     margin-left: 13px;
-    height: auto;
   }
 
   @media (min-width: variables.$desktop-width) {
-    min-width: 118px;
+    width: 118px;
     margin-left: 14px;
   }
 
