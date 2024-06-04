@@ -1,7 +1,4 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
-@use "mixins";
-@use "variables";
-
 *,
 *::before,
 *::after {
@@ -13,17 +10,7 @@ html {
 }
 
 body {
-  @include mixins.set-font(variables.$font-primary, 400, normal, 14px, 18px);
-  background-color: variables.$white;
-  color: variables.$font-color-primary;
   margin: 0;
-  height: 100%;
-
-
-  @media (min-width: variables.$tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-  }
 }
 
 img {

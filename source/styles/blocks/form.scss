@@ -24,6 +24,10 @@
     border: 2px solid variables.$error-color;
   }
 
+  &::placeholder {
+    color: variables.$font-color-primary;
+  }
+
   @media (min-width: variables.$tablet-width) {
     min-width: 376px;
   }
