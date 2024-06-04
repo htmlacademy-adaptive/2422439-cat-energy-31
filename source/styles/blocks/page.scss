@@ -1,4 +1,17 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .page__body {
+  @include mixins.set-font(variables.$font-primary, 400, normal, 14px, 18px);
   display: flex;
   flex-direction: column;
+  background-color: variables.$white;
+  color: variables.$font-color-primary;
+  height: 100%;
+
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
